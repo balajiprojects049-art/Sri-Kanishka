@@ -8,9 +8,9 @@ const MarriageServices = () => {
     const { openServiceModal } = useUI();
 
     return (
-        <div className="pt-24 min-h-screen bg-white">
+        <div className="min-h-screen bg-white">
             {/* Hero */}
-            <section className="relative py-24 mb-20 text-center overflow-hidden">
+            <section className="relative pt-32 pb-12 mb-20 text-center overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-rose-50 via-white to-pink-50/50"></div>
                 <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-rose-100/40 rounded-full blur-3xl -ml-20 -mt-20 pointer-events-none"></div>
 
@@ -89,6 +89,68 @@ const MarriageServices = () => {
                                 <p className="text-gray-500">{item.desc}</p>
                             </div>
                         ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Approach Text */}
+            <section className="py-16 bg-rose-50/50">
+                <div className="container-custom">
+                    <div className="max-w-4xl mx-auto text-center">
+                        <span className="text-rose-500 font-bold tracking-widest uppercase text-xs mb-3 block">Our Commitment</span>
+                        <h2 className="text-3xl font-bold text-gray-900 mb-6 font-display">A Union of Souls & Families</h2>
+                        <p className="text-lg text-gray-600 leading-relaxed mb-6">
+                            Marriage is more than just a ceremony; it is a lifetime commitment of two families. At Sri Kanishka, we understand the delicate balance between modern aspirations and traditional family values.
+                        </p>
+                        <p className="text-lg text-gray-600 leading-relaxed">
+                            Our dedicated relationship managers spend time understanding not just your biodata, but your personality, life goals, and family dynamics to suggest matches that truly resonate on a deeper level. We believe in creating alliances that stand the test of time.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            {/* Features Detail */}
+            <section className="py-12 mb-20">
+                <div className="container-custom">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        {[
+                            { title: "100% Verified Profiles", desc: "Every profile is screened physically to ensure safety.", icon: Shield },
+                            { title: "Privacy Control", desc: "You decide who sees your photos and contact details.", icon: Search },
+                            { title: "Personalized Support", desc: "Dedicated relationship managers to help you search.", icon: Users },
+                            { title: "25+ Years of Trust", desc: "Helping families unite across generations with integrity.", icon: Heart }
+                        ].map((feature, idx) => (
+                            <div key={idx} className="bg-rose-50 p-8 rounded-3xl hover:bg-white hover:shadow-xl transition-all duration-300 border border-rose-100 group">
+                                <div className="w-14 h-14 bg-white rounded-full flex items-center justify-center text-rose-500 mb-6 shadow-sm group-hover:scale-110 transition-transform">
+                                    <feature.icon size={28} />
+                                </div>
+                                <h3 className="font-bold text-lg text-gray-900 mb-3">{feature.title}</h3>
+                                <p className="text-gray-600 text-sm leading-relaxed">{feature.desc}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Marriage Stats */}
+            <section className="py-20 bg-rose-900 text-white rounded-[3rem] mx-4 mb-20">
+                <div className="container-custom text-center">
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-12 divide-x divide-rose-800">
+                        <div>
+                            <div className="text-4xl md:text-5xl font-bold mb-2">10k+</div>
+                            <div className="text-rose-200">Matches Made</div>
+                        </div>
+                        <div>
+                            <div className="text-4xl md:text-5xl font-bold mb-2">50k+</div>
+                            <div className="text-rose-200">Active Profiles</div>
+                        </div>
+                        <div>
+                            <div className="text-4xl md:text-5xl font-bold mb-2">98%</div>
+                            <div className="text-rose-200">Verification Rate</div>
+                        </div>
+                        <div>
+                            <div className="text-4xl md:text-5xl font-bold mb-2">24/7</div>
+                            <div className="text-rose-200">Support Team</div>
+                        </div>
                     </div>
                 </div>
             </section>

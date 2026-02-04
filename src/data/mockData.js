@@ -28,6 +28,36 @@ export const courses = [
         rating: 4.7,
         reviews: 156,
         image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?q=80&w=2070&auto=format&fit=crop"
+    },
+    {
+        id: 4,
+        title: "Cybersecurity Expert",
+        tech: ["Ethical Hacking", "Network Security", "Linux", "Python"],
+        duration: "6 Months",
+        level: "Intermediate - Advanced",
+        rating: 4.8,
+        reviews: 94,
+        image: "https://images.unsplash.com/photo-1563206767-5b1d97289374?q=80&w=2070&auto=format&fit=crop"
+    },
+    {
+        id: 5,
+        title: "Mobile App Development",
+        tech: ["Flutter", "Dart", "Firebase", "iOS/Android"],
+        duration: "4 Months",
+        level: "Beginner",
+        rating: 4.6,
+        reviews: 210,
+        image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=2070&auto=format&fit=crop"
+    },
+    {
+        id: 6,
+        title: "UI/UX Design Masterclass",
+        tech: ["Figma", "Adobe XD", "Prototyping", "User Research"],
+        duration: "3 Months",
+        level: "Beginner",
+        rating: 4.9,
+        reviews: 340,
+        image: "https://images.unsplash.com/photo-1586717791821-3f44a5638d48?q=80&w=2070&auto=format&fit=crop"
     }
 ];
 

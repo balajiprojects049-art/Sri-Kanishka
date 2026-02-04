@@ -9,7 +9,7 @@ const ITServices = () => {
     const { openServiceModal } = useUI();
 
     return (
-        <div className="pt-24 bg-white min-h-screen">
+        <div className="pt-3 bg-white min-h-screen">
             {/* Hero */}
             <section className="relative rounded-[2.5rem] margin-x-custom mx-4 md:mx-6 mb-16 overflow-hidden min-h-[400px] flex items-center border border-blue-100/50">
                 <div className="absolute inset-0 bg-blue-50"></div>
@@ -42,6 +42,44 @@ const ITServices = () => {
                         >
                             View Job Offers
                         </button>
+                    </div>
+                </div>
+            </section>
+
+            {/* Features & Benefits */}
+            <section className="py-12 bg-white">
+                <div className="container-custom">
+                    <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+                        {[
+                            { title: "Live Projects", desc: "Gain hands-on experience with real-world industry scenarios.", icon: Terminal },
+                            { title: "Expert Mentors", desc: "Learn directly from architects working in top MNCs.", icon: CheckCircle },
+                            { title: "Placement Support", desc: "Dedicated HR team for resume building and interview coaching.", icon: Briefcase },
+                            { title: "Corporate Consultancy", desc: "We provide specialized staffing and corporate training solutions.", icon: Database }
+                        ].map((feature, idx) => (
+                            <div key={idx} className="p-6 rounded-3xl bg-slate-50 border border-slate-100 hover:bg-white hover:shadow-xl hover:border-blue-100 transition-all duration-300 group">
+                                <div className="w-12 h-12 bg-white rounded-2xl shadow-sm text-blue-600 flex items-center justify-center mb-4 border border-slate-100 group-hover:scale-110 transition-transform">
+                                    <feature.icon size={24} />
+                                </div>
+                                <h3 className="font-bold text-lg text-gray-900 mb-2 font-display">{feature.title}</h3>
+                                <p className="text-sm text-gray-500 leading-relaxed">{feature.desc}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Methodology Text */}
+            <section className="py-16 bg-white border-y border-slate-50">
+                <div className="container-custom">
+                    <div className="max-w-4xl mx-auto text-center">
+                        <span className="text-blue-600 font-bold tracking-widest uppercase text-xs mb-3 block">Our Philosophy</span>
+                        <h2 className="text-3xl font-bold text-gray-900 mb-6 font-display">From Classroom to Boardroom</h2>
+                        <p className="text-lg text-gray-600 leading-relaxed mb-6">
+                            Our curriculum isn't just about code; it's about career architecture. We painstakingly design every module to mirror real-world software engineering challenges. You won't just learn syntax; you'll learn system design, scalability, and agile methodologies.
+                        </p>
+                        <p className="text-lg text-gray-600 leading-relaxed">
+                            Our goal is to transform you into a <strong>Day-1 ready professional</strong> who can contribute to major projects immediately. We bridge the gap between academic theory and industrial application through immersive, project-based learning.
+                        </p>
                     </div>
                 </div>
             </section>
@@ -115,6 +153,39 @@ const ITServices = () => {
                     </motion.div>
                 )}
             </div>
+
+            {/* Placement Stats & Partners */}
+            <section className="py-20 bg-slate-900 text-white rounded-t-[3rem] mt-auto">
+                <div className="container-custom">
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20 text-center divide-x divide-slate-800">
+                        <div>
+                            <div className="text-4xl md:text-5xl font-bold text-amber-500 mb-2 font-display">500+</div>
+                            <div className="text-sm md:text-base text-slate-400 font-medium">Students Placed</div>
+                        </div>
+                        <div>
+                            <div className="text-4xl md:text-5xl font-bold text-amber-500 mb-2 font-display">24 LPA</div>
+                            <div className="text-sm md:text-base text-slate-400 font-medium">Highest Package</div>
+                        </div>
+                        <div>
+                            <div className="text-4xl md:text-5xl font-bold text-amber-500 mb-2 font-display">50+</div>
+                            <div className="text-sm md:text-base text-slate-400 font-medium">Hiring Partners</div>
+                        </div>
+                        <div>
+                            <div className="text-4xl md:text-5xl font-bold text-amber-500 mb-2 font-display">92%</div>
+                            <div className="text-sm md:text-base text-slate-400 font-medium">Success Rate</div>
+                        </div>
+                    </div>
+
+                    <div className="text-center">
+                        <p className="text-slate-400 text-sm uppercase tracking-widest mb-8 font-bold">Our Alumni Work At</p>
+                        <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
+                            {['Google', 'Microsoft', 'Amazon', 'TCS', 'Infosys', 'Wipro'].map((company, i) => (
+                                <span key={i} className="text-xl md:text-2xl font-bold font-display text-white">{company}</span>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
     );
 };

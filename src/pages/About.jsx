@@ -13,7 +13,7 @@ const About = () => {
     return (
         <div className="bg-white">
             {/* Hero Section */}
-            <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-white">
+            <section className="relative pt-0 pb-16 lg:pt-10 lg:pb-24 overflow-hidden bg-white">
                 <div className="absolute inset-0 bg-gradient-to-br from-gold-50 via-white to-blue-50/60"></div>
                 <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-bl from-gold-100/40 to-transparent rounded-full blur-3xl -mr-20 -mt-20 pointer-events-none"></div>
 
