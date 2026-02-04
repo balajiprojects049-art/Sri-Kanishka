@@ -20,11 +20,19 @@ const Home = () => {
     return (
         <div className="overflow-hidden bg-white">
             {/* Hero Section */}
-            <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden pt-20">
-                {/* Background Elements */}
-                <div className="absolute inset-0 bg-gradient-to-br from-gold-50 via-white to-blue-50/50"></div>
-                <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-gradient-to-bl from-gold-100/40 to-transparent rounded-full blur-3xl -mr-40 -mt-40 pointer-events-none opacity-60"></div>
-                <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-gradient-to-tr from-blue-100/30 to-transparent rounded-full blur-3xl -ml-20 -mb-20 pointer-events-none opacity-60"></div>
+            <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+                <div className="absolute inset-0">
+                    <img
+                        src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=2000"
+                        alt="Sri Kanishka Associates - Holistic Growth"
+                        className="w-full h-full object-cover object-top"
+                    />
+                    <div className="absolute inset-0 bg-white/30"></div>
+                </div>
+
+                {/* Background Elements - Kept for depth */}
+                <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-gradient-to-bl from-gold-100/40 to-transparent rounded-full blur-3xl -mr-40 -mt-40 pointer-events-none opacity-40"></div>
+                <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-gradient-to-tr from-blue-100/30 to-transparent rounded-full blur-3xl -ml-20 -mb-20 pointer-events-none opacity-40"></div>
 
                 <div className="container-custom relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <motion.div
