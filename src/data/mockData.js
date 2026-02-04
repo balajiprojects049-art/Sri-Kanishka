@@ -17,7 +17,7 @@ export const courses = [
         level: "Intermediate",
         rating: 4.9,
         reviews: 89,
-        image: "https://images.unsplash.com/photo-1667372393119-c81c0cda0a18?q=80&w=2070&auto=format&fit=crop"
+        image: "/images/it/cloud-devops.png"
     },
     {
         id: 3,
@@ -27,7 +27,7 @@ export const courses = [
         level: "Advanced",
         rating: 4.7,
         reviews: 156,
-        image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?q=80&w=2070&auto=format&fit=crop"
+        image: "/images/it/ai-data.png"
     },
     {
         id: 4,
@@ -37,7 +37,7 @@ export const courses = [
         level: "Intermediate - Advanced",
         rating: 4.8,
         reviews: 94,
-        image: "https://images.unsplash.com/photo-1563206767-5b1d97289374?q=80&w=2070&auto=format&fit=crop"
+        image: "/images/it/cyber-security.png"
     },
     {
         id: 5,
@@ -47,7 +47,7 @@ export const courses = [
         level: "Beginner",
         rating: 4.6,
         reviews: 210,
-        image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=2070&auto=format&fit=crop"
+        image: "/images/it/mobile-dev.png"
     },
     {
         id: 6,
@@ -57,7 +57,7 @@ export const courses = [
         level: "Beginner",
         rating: 4.9,
         reviews: 340,
-        image: "https://images.unsplash.com/photo-1586717791821-3f44a5638d48?q=80&w=2070&auto=format&fit=crop"
+        image: "/images/it/ui-ux.png"
     }
 ];
 

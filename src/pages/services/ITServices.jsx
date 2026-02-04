@@ -12,7 +12,10 @@ const ITServices = () => {
         <div className="pt-3 bg-white min-h-screen">
             {/* Hero */}
             <section className="relative rounded-[2.5rem] margin-x-custom mx-4 md:mx-6 mb-16 overflow-hidden min-h-[400px] flex items-center border border-blue-100/50">
-                <div className="absolute inset-0 bg-blue-50"></div>
+                <div className="absolute inset-0">
+                    <img src="/images/it/hero-team.jpg" alt="IT Academy Team" className="w-full h-full object-cover" />
+                    <div className="absolute inset-0 bg-white/30"></div>
+                </div>
                 <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-bl from-blue-100/30 to-transparent rounded-full blur-3xl -mr-20 -mt-20 pointer-events-none"></div>
 
                 <div className="container-custom relative z-10 px-8 md:px-12 py-12">
@@ -186,7 +189,7 @@ const ITServices = () => {
                     </div>
                 </div>
             </section>
-        </div>
+        </div >
     );
 };
 

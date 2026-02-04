@@ -11,8 +11,10 @@ const MarriageServices = () => {
         <div className="min-h-screen bg-white">
             {/* Hero */}
             <section className="relative pt-32 pb-12 mb-20 text-center overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-rose-50 via-white to-pink-50/50"></div>
-                <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-rose-100/40 rounded-full blur-3xl -ml-20 -mt-20 pointer-events-none"></div>
+                <div className="absolute inset-0">
+                    <img src="/images/marriage/hero-couple.png" alt="Happy Couple" className="w-full h-full object-cover object-top" />
+                    <div className="absolute inset-0 bg-white/30"></div>
+                </div>
 
                 <div className="container-custom relative z-10">
                     <motion.div
@@ -157,8 +159,10 @@ const MarriageServices = () => {
 
             {/* Success Story Teaser */}
             <section className="py-24 relative overflow-hidden">
-                <div className="absolute inset-0 bg-[#f43f5e]"></div>
-                <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/hearts.png')] opacity-10"></div>
+                <div className="absolute inset-0">
+                    <img src="/images/marriage/rings-bg.jpg" alt="Wedding Rings" className="w-full h-full object-cover" />
+                    <div className="absolute inset-0 bg-rose-900/80"></div>
+                </div>
 
                 <div className="container-custom relative z-10 text-center text-white">
                     <h2 className="text-3xl md:text-5xl font-bold mb-8 font-display text-white">Ready to begin your journey?</h2>
@@ -172,7 +176,7 @@ const MarriageServices = () => {
                     </motion.button>
                 </div>
             </section>
-        </div>
+        </div >
     );
 };
 
