@@ -9,10 +9,8 @@ const Footer = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
                     {/* Brand */}
                     <div className="space-y-6">
-                        <Link to="/" className="inline-block">
-                            <h3 className="text-3xl font-bold text-white font-display">
-                                Sri Kanishka
-                            </h3>
+                        <Link to="/" className="inline-block transform hover:scale-105 transition-transform duration-300">
+                            <img src="/logo.png" alt="Sri Kanishka Associates" className="h-16 w-auto object-contain" />
                         </Link>
                         <p className="text-slate-400 leading-relaxed text-sm">
                             Empowering lives through career growth, relationship harmony, and inner peace. Your holistic partner for success and well-being.

@@ -36,11 +36,8 @@ const Header = () => {
             >
                 <div className="container-custom flex items-center justify-between">
                     <Link to="/" className="flex items-center gap-3 text-2xl font-semibold transform hover:scale-105 transition-transform duration-300" aria-label="Go to homepage">
-                        <span aria-hidden className="w-10 h-10 rounded-full bg-gradient-to-br from-gold-400 to-amber-600 flex items-center justify-center text-white font-bold shadow-md ring-1 ring-white/30">SK</span>
-                        <span className="flex items-center gap-1">
-                            <span className="text-gray-900">Sri</span>
-                            <span className="text-gold-600">Kanishka</span>
-                        </span>
+                        <img src="/logo.png" alt="Sri Kanishka Associates" className="h-20 w-auto object-contain" />
+                        <span className="sr-only">Sri Kanishka Associates</span>
                     </Link>
 
                     {/* Desktop Nav */}
