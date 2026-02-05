@@ -21,55 +21,61 @@ const Home = () => {
         <div className="overflow-hidden bg-white">
             {/* Hero Section */}
             <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
-                <div className="absolute inset-0">
+                <div className="absolute inset-0 z-0">
                     <img
                         src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=2000"
                         alt="Sri Kanishka Associates - Holistic Growth"
                         className="w-full h-full object-cover object-top"
                     />
-                    <div className="absolute inset-0 bg-white/30"></div>
+                    {/* No colored overlay - Image is clean */}
                 </div>
 
-                {/* Background Elements - Kept for depth */}
-                <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-gradient-to-bl from-gold-100/40 to-transparent rounded-full blur-3xl -mr-40 -mt-40 pointer-events-none opacity-40"></div>
-                <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-gradient-to-tr from-blue-100/30 to-transparent rounded-full blur-3xl -ml-20 -mb-20 pointer-events-none opacity-40"></div>
+                {/* Animated Background Elements - Reduced opacity for clear image view */}
+                <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-gold-100/20 rounded-full blur-3xl -mr-40 -mt-40 pointer-events-none"></div>
+                <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-blue-100/20 rounded-full blur-3xl -ml-20 -mb-20 pointer-events-none"></div>
 
                 <div className="container-custom relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <motion.div
                         initial={{ opacity: 0, x: -50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8 }}
-                        className="pt-8 lg:pt-0 text-center lg:text-left"
+                        className="p-8 lg:p-12 rounded-[2.5rem] bg-white/5 backdrop-blur-sm border border-white/20 shadow-xl relative overflow-hidden group"
                     >
-                        <motion.div
-                            initial={{ opacity: 0, y: 10 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 0.2 }}
-                            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-gold-100 shadow-sm text-gold-600 font-bold text-sm tracking-wide mb-8 mx-auto lg:mx-0"
-                        >
-                            <Sparkles size={16} />
-                            <span>Holistic Growth Ecosystem</span>
-                        </motion.div>
+                        {/* Mirror Shine Effect */}
+                        <div className="absolute inset-0 bg-gradient-to-br from-white/30 to-transparent opacity-30 group-hover:opacity-40 transition-opacity pointer-events-none"></div>
 
-                        <h1 className="text-5xl md:text-7xl font-bold text-gray-900 leading-[1.1] mb-6 tracking-tight">
-                            Elevate Your <br />
-                            <span className="text-gradient-gold">Career, Life</span> & <br />
-                            <span className="bg-gradient-to-r from-blue-500 to-indigo-600 bg-clip-text text-transparent">Inner Peace</span>
-                        </h1>
+                        <div className="relative z-10">
+                            <motion.div
+                                initial={{ opacity: 0, y: 10 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ delay: 0.2 }}
+                                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/40 backdrop-blur-md border border-white/50 shadow-sm text-gray-900 font-bold text-sm tracking-wide mb-8"
+                            >
+                                <Sparkles size={16} className="text-gold-600" />
+                                <span>Holistic Growth Ecosystem</span>
+                            </motion.div>
 
-                        <p className="text-xl text-gray-600 mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed">
-                            One platform integrating professional IT training, trusted matrimonial services, and spiritual guidance for a complete and fulfilled life.
-                        </p>
+                            <h1 className="text-5xl md:text-7xl font-bold text-gray-900 leading-[1.1] mb-6 tracking-tight font-display drop-shadow-sm">
+                                Elevate Your <br />
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold-700 to-amber-700">Career, Life</span> & <br />
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-indigo-700">Inner Peace</span>
+                            </h1>
 
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                            <Link to="/services" className="btn-primary hover:scale-105 transition-transform flex items-center justify-center gap-2">
-                                Explore Services <ArrowRight size={18} />
-                            </Link>
-                            <Link to="/contact" className="btn-ghost border border-gray-200 bg-white hover:bg-gold-50 hover:shadow-md transition-all">
-                                Get Started
-                            </Link>
+                            <p className="text-xl text-gray-800 mb-10 max-w-xl leading-relaxed font-medium">
+                                One platform integrating professional IT training, trusted matrimonial services, and spiritual guidance for a complete and fulfilled life.
+                            </p>
+
+                            <div className="flex flex-col sm:flex-row gap-4">
+                                <Link to="/services" className="px-8 py-3.5 rounded-full font-bold text-white bg-gray-900 hover:bg-gray-800 transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2">
+                                    Explore Services <ArrowRight size={18} />
+                                </Link>
+                                <Link to="/contact" className="px-8 py-3.5 rounded-full font-bold text-gray-900 bg-white/50 hover:bg-white border border-white/60 shadow-sm hover:shadow-md transition-all flex items-center justify-center backdrop-blur-sm">
+                                    Get Started
+                                </Link>
+                            </div>
                         </div>
                     </motion.div>
+
 
                     <motion.div
                         initial={{ opacity: 0, scale: 0.95 }}
@@ -82,25 +88,25 @@ const Home = () => {
                             <motion.div
                                 animate={{ y: [0, -20, 0] }}
                                 transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                                className="absolute top-10 right-10 bg-white p-6 rounded-3xl shadow-xl border border-gray-50 z-20 max-w-[260px]"
+                                className="absolute top-10 right-10 bg-white/90 backdrop-blur-md p-6 rounded-3xl shadow-2xl border border-white/50 z-20 max-w-[260px]"
                             >
-                                <div className="w-12 h-12 bg-blue-50 rounded-2xl flex items-center justify-center text-blue-600 mb-4"><Code size={24} /></div>
-                                <h3 className="font-bold text-lg mb-1">Tech Mastery</h3>
+                                <div className="w-12 h-12 bg-blue-50 rounded-2xl flex items-center justify-center text-blue-600 mb-4 shadow-inner"><Code size={24} /></div>
+                                <h3 className="font-bold text-lg mb-1 text-gray-900">Tech Mastery</h3>
                                 <p className="text-gray-500 text-sm">Full-stack & Cloud training for modern careers.</p>
                             </motion.div>
 
                             <motion.div
                                 animate={{ y: [0, 20, 0] }}
                                 transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                                className="absolute bottom-20 left-10 bg-white p-6 rounded-3xl shadow-xl border border-gray-50 z-20 max-w-[260px]"
+                                className="absolute bottom-20 left-10 bg-white/90 backdrop-blur-md p-6 rounded-3xl shadow-2xl border border-white/50 z-20 max-w-[260px]"
                             >
-                                <div className="w-12 h-12 bg-indigo-50 rounded-2xl flex items-center justify-center text-indigo-600 mb-4"><Flower size={24} /></div>
-                                <h3 className="font-bold text-lg mb-1">Inner Balance</h3>
+                                <div className="w-12 h-12 bg-indigo-50 rounded-2xl flex items-center justify-center text-indigo-600 mb-4 shadow-inner"><Flower size={24} /></div>
+                                <h3 className="font-bold text-lg mb-1 text-gray-900">Inner Balance</h3>
                                 <p className="text-gray-500 text-sm">Ancient wisdom for modern peace of mind.</p>
                             </motion.div>
 
-                            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-gradient-to-tr from-gold-200 to-amber-100 rounded-full mix-blend-multiply filter blur-2xl opacity-50 animate-blob"></div>
-                            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[350px] bg-gradient-to-tl from-blue-200 to-purple-200 rounded-full mix-blend-multiply filter blur-2xl opacity-50 animate-blob animation-delay-2000"></div>
+                            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-gradient-to-tr from-gold-200 to-amber-100 rounded-full mix-blend-multiply filter blur-3xl opacity-60 animate-blob"></div>
+                            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[350px] bg-gradient-to-tl from-blue-200 to-purple-200 rounded-full mix-blend-multiply filter blur-3xl opacity-60 animate-blob animation-delay-2000"></div>
 
                             <motion.div
                                 animate={{ scale: [1, 1.05, 1] }}
@@ -108,7 +114,7 @@ const Home = () => {
                                 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 glass p-8 rounded-full shadow-2xl"
                             >
                                 <div className="text-center">
-                                    <div className="w-16 h-16 bg-gradient-to-br from-gold-400 to-amber-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-2 shadow-lg">
+                                    <div className="w-16 h-16 bg-gradient-to-br from-gold-400 to-amber-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-2 shadow-lg ring-4 ring-gold-100">
                                         SK
                                     </div>
                                     <p className="font-serif font-bold text-gray-900">Est. 2018</p>
@@ -118,6 +124,7 @@ const Home = () => {
                     </motion.div>
                 </div>
             </section>
+
 
             {/* Stats Section */}
             <section className="py-12 bg-white border-y border-gray-50">

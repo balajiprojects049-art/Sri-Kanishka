@@ -11,43 +11,57 @@ const ITServices = () => {
     return (
         <div className="pt-3 bg-white min-h-screen">
             {/* Hero */}
-            <section className="relative rounded-[2.5rem] margin-x-custom mx-4 md:mx-6 mb-16 overflow-hidden min-h-[400px] flex items-center border border-blue-100/50">
+            {/* Hero */}
+            <section className="relative rounded-[2.5rem] margin-x-custom mx-4 md:mx-6 mb-16 overflow-hidden min-h-[500px] flex items-center shadow-2xl shadow-blue-100/50">
                 <div className="absolute inset-0">
                     <img src="/images/it/hero-team.jpg" alt="IT Academy Team" className="w-full h-full object-cover" />
-                    <div className="absolute inset-0 bg-white/30"></div>
+                    {/* Clear Image - No Overlay */}
                 </div>
-                <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-bl from-blue-100/30 to-transparent rounded-full blur-3xl -mr-20 -mt-20 pointer-events-none"></div>
+
+                {/* Decorative Elements - Subtle */}
+                <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-900/10 rounded-full blur-3xl -mr-20 -mt-20 pointer-events-none mix-blend-multiply"></div>
 
                 <div className="container-custom relative z-10 px-8 md:px-12 py-12">
                     <motion.div
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-blue-100 text-blue-600 text-xs font-bold uppercase tracking-wider mb-6 shadow-sm"
+                        className="max-w-3xl p-8 md:p-12 rounded-[2.5rem] bg-white/5 backdrop-blur-sm border border-white/10 shadow-xl relative overflow-hidden group"
                     >
-                        <Sparkles size={14} />
-                        Tech Academy
-                    </motion.div>
+                        {/* Mirror Reflection / Shimmer */}
+                        <div className="absolute inset-0 bg-gradient-to-br from-white/30 via-white/5 to-transparent opacity-30 pointer-events-none"></div>
 
-                    <h1 className="text-4xl md:text-6xl font-bold mb-6 text-gray-900 font-display">Launch Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">IT Career</span></h1>
-                    <p className="text-xl text-gray-600 max-w-2xl mb-10 leading-relaxed font-sans">
-                        Master the latest technologies with our industry-aligned curriculum. From full-stack development to cloud engineers, we build the future workforce.
-                    </p>
-                    <div className="flex flex-wrap gap-4">
-                        <button
-                            onClick={() => setActiveTab('courses')}
-                            className={`px-8 py-3 rounded-full font-bold transition-all shadow-lg ${activeTab === 'courses' ? 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-blue-200' : 'bg-white text-gray-600 hover:text-blue-600 border border-gray-100'}`}
-                        >
-                            Browse Courses
-                        </button>
-                        <button
-                            onClick={() => setActiveTab('jobs')}
-                            className={`px-8 py-3 rounded-full font-bold transition-all shadow-lg ${activeTab === 'jobs' ? 'bg-gradient-to-r from-green-500 to-emerald-600 text-white shadow-green-200' : 'bg-white text-gray-600 hover:text-green-600 border border-gray-100'}`}
-                        >
-                            View Job Offers
-                        </button>
-                    </div>
+                        <div className="relative z-10">
+                            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/60 backdrop-blur-md border border-white/50 text-blue-800 text-xs font-bold uppercase tracking-wider mb-8 shadow-sm">
+                                <Sparkles size={14} className="text-blue-600" />
+                                Tech Academy
+                            </div>
+
+                            <h1 className="text-5xl md:text-7xl font-bold mb-6 text-gray-900 font-display leading-tight drop-shadow-sm">
+                                Launch Your <br />
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-indigo-700">IT Career Today</span>
+                            </h1>
+                            <p className="text-xl text-gray-800 max-w-2xl mb-12 leading-relaxed font-sans font-medium">
+                                Master the latest technologies with our industry-aligned curriculum. From full-stack development to cloud engineers, we build the future workforce.
+                            </p>
+                            <div className="flex flex-wrap gap-4">
+                                <button
+                                    onClick={() => setActiveTab('courses')}
+                                    className={`px-8 py-4 rounded-full font-bold transition-all shadow-lg hover:-translate-y-1 ${activeTab === 'courses' ? 'bg-gradient-to-r from-blue-700 to-indigo-700 text-white shadow-blue-200' : 'bg-white/50 text-gray-900 hover:bg-white border border-white/50'}`}
+                                >
+                                    Browse Courses
+                                </button>
+                                <button
+                                    onClick={() => setActiveTab('jobs')}
+                                    className={`px-8 py-4 rounded-full font-bold transition-all shadow-lg hover:-translate-y-1 ${activeTab === 'jobs' ? 'bg-gradient-to-r from-green-600 to-emerald-700 text-white shadow-green-200' : 'bg-white/50 text-gray-900 hover:bg-white border border-white/50'}`}
+                                >
+                                    View Job Offers
+                                </button>
+                            </div>
+                        </div>
+                    </motion.div>
                 </div>
             </section>
+
 
             {/* Features & Benefits */}
             <section className="py-12 bg-white">

@@ -10,63 +10,73 @@ const MarriageServices = () => {
     return (
         <div className="min-h-screen bg-white">
             {/* Hero */}
-            <section className="relative pt-32 pb-12 mb-20 text-center overflow-hidden">
+            {/* Hero */}
+            {/* Hero */}
+            <section className="relative pt-36 pb-20 mb-20 text-center overflow-hidden">
                 <div className="absolute inset-0">
                     <img src="/images/marriage/hero-couple.png" alt="Happy Couple" className="w-full h-full object-cover object-top" />
-                    <div className="absolute inset-0 bg-white/30"></div>
+                    {/* Clear Image - No Overlay */}
                 </div>
 
                 <div className="container-custom relative z-10">
-                    <motion.div
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        className="inline-flex items-center justify-center px-4 py-2 bg-white rounded-full shadow-md mb-8 border border-rose-100 text-rose-500 font-bold text-sm tracking-wide gap-2"
-                    >
-                        <Heart className="fill-rose-500" size={16} />
-                        <span>Trusted by 5000+ Couples</span>
-                    </motion.div>
+                    <div className="max-w-5xl mx-auto p-8 md:p-12 rounded-[3.5rem] bg-white/10 backdrop-blur-sm border border-white/20 shadow-xl relative overflow-hidden">
+                        {/* Shimmer */}
+                        <div className="absolute inset-0 bg-gradient-to-b from-white/20 to-transparent pointer-events-none opacity-20"></div>
 
-                    <h1 className="text-5xl md:text-7xl font-bold mb-6 text-gray-900 font-display">
-                        Find Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-pink-600">Soulmate</span>.
-                    </h1>
-                    <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-12 leading-relaxed">
-                        We blend traditional values with modern preferences to help you write your perfect love story. Verified profiles, absolute privacy, and personalized matchmaking.
-                    </p>
+                        <div className="relative z-10">
+                            <motion.div
+                                initial={{ opacity: 0, scale: 0.9 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                className="inline-flex items-center justify-center px-6 py-2 bg-white/60 backdrop-blur-md rounded-full shadow-lg mb-8 border border-white/60 text-rose-600 font-bold text-sm tracking-wide gap-2 ring-1 ring-white/50"
+                            >
+                                <Heart className="fill-rose-500 text-rose-500" size={16} />
+                                <span>Trusted by 5000+ Couples</span>
+                            </motion.div>
 
-                    {/* Simple Search Mockup */}
-                    <div className="bg-white p-3 rounded-full shadow-xl shadow-rose-100/50 max-w-4xl mx-auto flex flex-col md:flex-row gap-2 items-center border border-rose-100">
-                        <div className="flex-1 w-full relative group">
-                            <select className="appearance-none w-full p-4 bg-transparent border-none outline-none font-bold text-gray-700 cursor-pointer">
-                                <option>Looking for a Bride</option>
-                                <option>Looking for a Groom</option>
-                            </select>
-                            <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 text-rose-400 group-hover:text-rose-600 pointer-events-none" size={16} />
+                            <h1 className="text-5xl md:text-7xl font-bold mb-6 text-gray-900 font-display drop-shadow-sm">
+                                Find Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-600 to-pink-700">Soulmate</span>.
+                            </h1>
+                            <p className="text-xl text-gray-900 max-w-3xl mx-auto mb-12 leading-relaxed font-medium drop-shadow-sm">
+                                We blend traditional values with modern preferences to help you write your perfect love story. Verified profiles, absolute privacy, and personalized matchmaking.
+                            </p>
+
+                            {/* Premium Glass Search Bar - Refined for nesting */}
+                            <div className="bg-white/40 p-3 rounded-[2.5rem] shadow-xl border border-white/50 flex flex-col md:flex-row gap-2 items-center backdrop-blur-md">
+                                <div className="flex-1 w-full relative group bg-white/60 rounded-2xl hover:bg-white/80 transition-colors">
+                                    <select className="appearance-none w-full p-4 bg-transparent border-none outline-none font-bold text-gray-800 cursor-pointer pl-6">
+                                        <option>Looking for a Bride</option>
+                                        <option>Looking for a Groom</option>
+                                    </select>
+                                    <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 text-rose-500 pointer-events-none" size={16} />
+                                </div>
+                                <div className="w-px h-8 bg-gray-400/30 hidden md:block"></div>
+                                <div className="flex-1 w-full relative group bg-white/60 rounded-2xl hover:bg-white/80 transition-colors">
+                                    <select className="appearance-none w-full p-4 bg-transparent border-none outline-none font-bold text-gray-800 cursor-pointer pl-6">
+                                        <option>Age 22 - 28</option>
+                                        <option>Age 28 - 35</option>
+                                        <option>Age 35+</option>
+                                    </select>
+                                    <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 text-rose-500 pointer-events-none" size={16} />
+                                </div>
+                                <div className="w-px h-8 bg-gray-400/30 hidden md:block"></div>
+                                <div className="flex-1 w-full relative group bg-white/60 rounded-2xl hover:bg-white/80 transition-colors">
+                                    <select className="appearance-none w-full p-4 bg-transparent border-none outline-none font-bold text-gray-800 cursor-pointer pl-6">
+                                        <option>Any Religion</option>
+                                        <option>Hindu</option>
+                                        <option>Muslim</option>
+                                        <option>Christian</option>
+                                    </select>
+                                    <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 text-rose-400 pointer-events-none" size={16} />
+                                </div>
+                                <button className="bg-gradient-to-r from-rose-500 to-pink-600 text-white px-10 py-4 rounded-full font-bold hover:shadow-lg hover:shadow-rose-500/30 transition-all w-full md:w-auto shrink-0 transform hover:-translate-y-0.5">
+                                    Search Matches
+                                </button>
+                            </div>
                         </div>
-                        <div className="w-px h-8 bg-gray-200 hidden md:block"></div>
-                        <div className="flex-1 w-full relative group">
-                            <select className="appearance-none w-full p-4 bg-transparent border-none outline-none font-bold text-gray-700 cursor-pointer">
-                                <option>Age 22 - 28</option>
-                                <option>Age 28 - 35</option>
-                                <option>Age 35+</option>
-                            </select>
-                            <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 text-rose-400 group-hover:text-rose-600 pointer-events-none" size={16} />
-                        </div>
-                        <div className="w-px h-8 bg-gray-200 hidden md:block"></div>
-                        <div className="flex-1 w-full relative group">
-                            <select className="appearance-none w-full p-4 bg-transparent border-none outline-none font-bold text-gray-700 cursor-pointer">
-                                <option>Any Religion</option>
-                                <option>Hindu</option>
-                                <option>Muslim</option>
-                                <option>Christian</option>
-                            </select>
-                            <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 text-rose-400 group-hover:text-rose-600 pointer-events-none" size={16} />
-                        </div>
-                        <button className="bg-gradient-to-r from-rose-500 to-pink-600 text-white px-8 py-3 rounded-full font-bold hover:shadow-lg hover:shadow-rose-500/30 transition-all w-full md:w-auto shrink-0">
-                            Search
-                        </button>
                     </div>
                 </div>
             </section>
+
 
             {/* Process Section */}
             <section className="py-20 bg-white">
