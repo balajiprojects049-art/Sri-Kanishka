@@ -31,25 +31,25 @@ const Header = () => {
     return (
         <>
             <header
-                className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 border-b border-transparent ${isScrolled ? 'bg-white/95 backdrop-blur-md shadow-sm py-3 border-gray-100' : 'bg-transparent py-5'
+                className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 border-b ${isScrolled ? 'bg-white/95 backdrop-blur-md shadow-sm py-3 border-gray-100' : 'bg-white/5 backdrop-blur-sm py-5 border-white/10'
                     }`}
             >
                 <div className="container-custom flex items-center justify-between">
                     <Link to="/" className="flex items-center gap-3 text-2xl font-semibold transform hover:scale-105 transition-transform duration-300" aria-label="Go to homepage">
-                        <img src="/logo.png" alt="Sri Kanishka Associates" className="h-20 w-auto object-contain" />
+                        <img src="/logo.png" alt="Sri Kanishka Associates" className="h-20 w-auto object-contain mix-blend-multiply" />
                         <span className="sr-only">Sri Kanishka Associates</span>
                     </Link>
 
                     {/* Desktop Nav */}
                     <nav className="hidden md:flex items-center space-x-8">
-                        <Link to="/" className={`font-medium text-sm tracking-wide transition-colors ${location.pathname === '/' ? 'text-gold-600' : 'text-gray-600 hover:text-gold-600'}`}>HOME</Link>
+                        <Link to="/" className={`font-bold text-sm tracking-wide transition-colors ${location.pathname === '/' ? 'text-gold-600' : 'text-gray-900 hover:text-gold-600'}`}>HOME</Link>
 
                         <div
                             className="relative group"
                             onMouseEnter={() => setHoveredService(true)}
                             onMouseLeave={() => setHoveredService(false)}
                         >
-                            <button className={`flex items-center space-x-1 font-medium text-sm tracking-wide transition-colors ${location.pathname.includes('/services') ? 'text-gold-600' : 'text-gray-600 group-hover:text-gold-600'}`}>
+                            <button className={`flex items-center space-x-1 font-bold text-sm tracking-wide transition-colors ${location.pathname.includes('/services') ? 'text-gold-600' : 'text-gray-900 group-hover:text-gold-600'}`}>
                                 <span>SERVICES</span>
                                 <ChevronDown size={14} className="group-hover:rotate-180 transition-transform duration-300" />
                             </button>
@@ -89,8 +89,8 @@ const Header = () => {
                             </AnimatePresence>
                         </div>
 
-                        <Link to="/about" className={`font-medium text-sm tracking-wide transition-colors ${location.pathname === '/about' ? 'text-gold-600' : 'text-gray-600 hover:text-gold-600'}`}>ABOUT</Link>
-                        <Link to="/contact" className={`font-medium text-sm tracking-wide transition-colors ${location.pathname === '/contact' ? 'text-gold-600' : 'text-gray-600 hover:text-gold-600'}`}>CONTACT</Link>
+                        <Link to="/about" className={`font-bold text-sm tracking-wide transition-colors ${location.pathname === '/about' ? 'text-gold-600' : 'text-gray-900 hover:text-gold-600'}`}>ABOUT</Link>
+                        <Link to="/contact" className={`font-bold text-sm tracking-wide transition-colors ${location.pathname === '/contact' ? 'text-gold-600' : 'text-gray-900 hover:text-gold-600'}`}>CONTACT</Link>
                     </nav>
 
                     <div className="hidden md:flex items-center space-x-4">
