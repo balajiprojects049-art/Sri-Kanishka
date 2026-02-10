@@ -3,9 +3,11 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, Code, Heart, Flower, Star, Quote, ChevronLeft, ChevronRight, Sparkles, Users, Briefcase, Sun, CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { stats, testimonials } from '../data/mockData';
+import { useUI } from '../context/UIContext';
 
 const Home = () => {
     const [currentTestimonial, setCurrentTestimonial] = useState(0);
+    const { openServiceModal } = useUI();
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -116,6 +118,68 @@ const Home = () => {
                 </div>
             </section>
 
+
+            {/* Upcoming Events Section */}
+            <section className="py-24 relative overflow-hidden border-y border-gray-100 bg-white">
+                <div className="container-custom text-center">
+                    <motion.span
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        className="text-gray-400 font-bold tracking-[0.3em] uppercase text-xs mb-10 block"
+                    >
+                        Upcoming Events
+                    </motion.span>
+
+                    <div className="max-w-4xl mx-auto space-y-16">
+                        {/* Event 1 */}
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            className="space-y-6"
+                        >
+                            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 font-display">21-day Maitri Sambodh Dhyaan</h3>
+                            <p className="text-gray-600 text-lg leading-relaxed max-w-3xl mx-auto">
+                                A powerful meditation devised for the current time to Bond with your Divine. Cleanses the Body, Mind and Soul and awakens the third-eye chakra.
+                                <br />
+                                <span className="text-gray-500 text-base font-medium">(Online, no charges applicable)</span>
+                            </p>
+                            <Link
+                                to="/services/maitri-sambodh-dhyaan"
+                                className="text-gold-600 font-bold hover:text-gold-700 transition-colors uppercase tracking-[0.2em] text-sm"
+                            >
+                                Details & Participation
+                            </Link>
+                        </motion.div>
+
+                        {/* Elegant Separator */}
+                        <div className="flex justify-center items-center gap-4 text-gold-200">
+                            <div className="w-16 h-px bg-current"></div>
+                            <div className="w-1.5 h-1.5 rounded-full bg-gold-400"></div>
+                            <div className="w-16 h-px bg-current"></div>
+                        </div>
+
+                        {/* Event 2 */}
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            className="space-y-6"
+                        >
+                            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 font-display">Maitri Havan</h3>
+                            <p className="text-gray-600 text-lg leading-relaxed max-w-3xl mx-auto">
+                                Havan (sacred fire ritual) is a powerful Vedic process, conducted as a prayer offering to the Divine. Through Maitri Havan, one can offer a personal prayer relating to any facet of life – spiritual, material, relationship, well-being, and so on – to help one grow and move ahead in life.
+                            </p>
+                            <Link
+                                to="/services/maitri-havan"
+                                className="text-gold-600 font-bold hover:text-gold-700 transition-colors uppercase tracking-[0.2em] text-sm"
+                            >
+                                Book A Havan
+                            </Link>
+                        </motion.div>
+                    </div>
+                </div>
+            </section>
 
             {/* Stats Section */}
             <section className="py-16 -mt-10 relative z-30">
@@ -338,6 +402,10 @@ const Home = () => {
                     </div>
                 </div>
             </section>
+
+            {/* Testimonials Section */}
+            {/* Same as before... */}
+
 
             {/* FAQ */}
             <section className="py-24">

@@ -12,6 +12,8 @@ import Contact from './pages/Contact';
 import ITServices from './pages/services/ITServices';
 import MarriageServices from './pages/services/MarriageServices';
 import MeditationServices from './pages/services/MeditationServices';
+import MaitriHavan from './pages/services/MaitriHavan';
+import MaitriSambodhDhyaan from './pages/services/MaitriSambodhDhyaan';
 
 // Scroll to top on route change
 const ScrollToTop = () => {
@@ -43,6 +45,8 @@ const AnimatedRoutes = () => {
         <Route path="/services/it" element={<PageTransition><ITServices /></PageTransition>} />
         <Route path="/services/marriage" element={<PageTransition><MarriageServices /></PageTransition>} />
         <Route path="/services/meditation" element={<PageTransition><MeditationServices /></PageTransition>} />
+        <Route path="/services/maitri-havan" element={<PageTransition><MaitriHavan /></PageTransition>} />
+        <Route path="/services/maitri-sambodh-dhyaan" element={<PageTransition><MaitriSambodhDhyaan /></PageTransition>} />
         <Route path="/about" element={<PageTransition><About /></PageTransition>} />
         <Route path="/contact" element={<PageTransition><Contact /></PageTransition>} />
       </Routes>
