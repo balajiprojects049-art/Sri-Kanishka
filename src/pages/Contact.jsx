@@ -44,9 +44,9 @@ const Contact = () => {
     );
 
     return (
-        <div className="bg-white min-h-screen">
+        <div className="min-h-screen">
             {/* Hero Section */}
-            <section className="relative pt-32 pb-24 overflow-hidden">
+            <section className="relative pt-32 pb-12 overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-gold-50"></div>
                 <div className="absolute -top-20 -left-20 w-[600px] h-[600px] bg-blue-100/30 rounded-full blur-3xl pointer-events-none"></div>
 
@@ -73,7 +73,7 @@ const Contact = () => {
                 </div>
             </section>
 
-            <div className="container-custom -mt-10 relative z-20 pb-20">
+            <div className="container-custom pt-10 relative z-20 pb-20">
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                     {/* Info Cards */}
                     <div className="lg:col-span-1 space-y-4">

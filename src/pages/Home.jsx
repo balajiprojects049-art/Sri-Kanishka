@@ -18,7 +18,7 @@ const Home = () => {
     const prevTestimonial = () => setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
 
     return (
-        <div className="overflow-hidden bg-white">
+        <div className="overflow-hidden">
             {/* Hero Section */}
             <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
                 <div className="absolute inset-0 z-0">
@@ -127,7 +127,7 @@ const Home = () => {
 
 
             {/* Stats Section */}
-            <section className="py-12 bg-white border-y border-gray-50">
+            <section className="py-12 border-y border-gray-50">
                 <div className="container-custom">
                     <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 divide-x divide-gray-100/50">
                         {stats.map((stat, idx) => (
@@ -237,7 +237,7 @@ const Home = () => {
             </section>
 
             {/* How It Works */}
-            <section className="py-24 bg-white">
+            <section className="py-24">
                 <div className="container-custom">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                         <div>
@@ -345,7 +345,7 @@ const Home = () => {
             </section>
 
             {/* FAQ */}
-            <section className="py-24 bg-white">
+            <section className="py-24">
                 <div className="container-custom">
                     <div className="max-w-3xl mx-auto">
                         <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center font-display">Frequently Asked Questions</h3>

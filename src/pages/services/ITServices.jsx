@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Code, Terminal, Database, CheckCircle, ArrowRight, Briefcase, Sparkles } from 'lucide-react';
+import { Code, Terminal, Database, CheckCircle, ArrowRight, Briefcase, Sparkles, Star } from 'lucide-react';
 import { courses, jobOffers } from '../../data/mockData';
 import { useUI } from '../../context/UIContext';
 
@@ -9,7 +9,7 @@ const ITServices = () => {
     const { openServiceModal } = useUI();
 
     return (
-        <div className="pt-3 bg-white min-h-screen">
+        <div className="pt-3 min-h-screen">
             {/* Hero */}
             {/* Hero */}
             <section className="relative rounded-[2.5rem] margin-x-custom mx-4 md:mx-6 mb-16 overflow-hidden min-h-[500px] flex items-center shadow-2xl shadow-blue-100/50">
@@ -64,7 +64,7 @@ const ITServices = () => {
 
 
             {/* Features & Benefits */}
-            <section className="py-12 bg-white">
+            <section className="py-12">
                 <div className="container-custom">
                     <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
                         {[
@@ -86,15 +86,20 @@ const ITServices = () => {
             </section>
 
             {/* Methodology Text */}
-            <section className="py-16 bg-white border-y border-slate-50">
-                <div className="container-custom">
+            <section className="py-20 bg-white rounded-[3rem] mx-4 md:mx-6 mb-20 shadow-xl shadow-gold-900/10 relative overflow-hidden">
+                {/* Decorative Background */}
+                <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-600"></div>
+                <div className="absolute -left-20 top-20 w-64 h-64 bg-blue-50 rounded-full blur-3xl opacity-50 pointer-events-none"></div>
+                <div className="absolute -right-20 bottom-20 w-64 h-64 bg-gold-50 rounded-full blur-3xl opacity-50 pointer-events-none"></div>
+
+                <div className="container-custom relative z-10">
                     <div className="max-w-4xl mx-auto text-center">
-                        <span className="text-blue-600 font-bold tracking-widest uppercase text-xs mb-3 block">Our Philosophy</span>
-                        <h2 className="text-3xl font-bold text-gray-900 mb-6 font-display">From Classroom to Boardroom</h2>
-                        <p className="text-lg text-gray-600 leading-relaxed mb-6">
+                        <span className="inline-block py-1 px-3 rounded-full bg-blue-50 text-blue-600 font-bold tracking-widest uppercase text-xs mb-6 border border-blue-100">Our Philosophy</span>
+                        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8 font-display">From Classroom to Boardroom</h2>
+                        <p className="text-xl text-gray-600 leading-relaxed mb-8">
                             Our curriculum isn't just about code; it's about career architecture. We painstakingly design every module to mirror real-world software engineering challenges. You won't just learn syntax; you'll learn system design, scalability, and agile methodologies.
                         </p>
-                        <p className="text-lg text-gray-600 leading-relaxed">
+                        <p className="text-xl text-gray-600 leading-relaxed">
                             Our goal is to transform you into a <strong>Day-1 ready professional</strong> who can contribute to major projects immediately. We bridge the gap between academic theory and industrial application through immersive, project-based learning.
                         </p>
                     </div>
@@ -106,36 +111,77 @@ const ITServices = () => {
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+                        className="space-y-12"
                     >
-                        {courses.map((course) => (
-                            <div key={course.id} className="bg-white rounded-[2rem] overflow-hidden card-shadow border border-gray-100 hover:border-blue-200 hover:-translate-y-1 transition-all duration-300 group">
-                                <div className="h-52 overflow-hidden relative">
-                                    <img src={course.image} alt={course.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent"></div>
-                                    <div className="absolute bottom-4 left-4 text-white font-bold bg-white/20 px-3 py-1 rounded-full backdrop-blur-md text-sm border border-white/30">
-                                        {course.duration}
+                        {courses.map((course, index) => (
+                            <div key={course.id} className="bg-white rounded-[2.5rem] p-6 md:p-8 card-shadow border border-gray-100 hover:border-blue-200 transition-all duration-300 group flex flex-col md:flex-row items-center gap-8 md:gap-12">
+                                {/* Left Content: Information */}
+                                <div className={`flex-1 w-full order-2 ${index % 2 === 0 ? 'md:order-1' : 'md:order-2'}`}>
+                                    <div className="flex items-center gap-3 mb-4">
+                                        <span className="bg-blue-50 text-blue-600 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border border-blue-100">
+                                            {course.level}
+                                        </span>
+                                        <span className="flex items-center gap-1 text-xs font-bold text-gray-500">
+                                            <Sparkles size={12} className="text-gold-400 fill-gold-400" /> {course.rating} ({course.reviews} reviews)
+                                        </span>
+                                    </div>
+
+                                    <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 font-display leading-tight">{course.title}</h3>
+
+                                    <p className="text-gray-600 mb-6 leading-relaxed">
+                                        Master {course.tech.join(', ')} and build real-world applications. This comprehensive course is designed to take you from {course.level.toLowerCase()} level to industry-ready.
+                                    </p>
+
+                                    <div className="mb-8 p-6 bg-blue-50/50 rounded-2xl border border-blue-100">
+                                        <h4 className="font-bold text-gray-900 mb-3 text-sm uppercase tracking-wide">What you'll learn:</h4>
+                                        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-gray-600">
+                                            {[
+                                                "Industry-standard coding practices",
+                                                "Real-time project implementation",
+                                                "System design & architecture",
+                                                "Performance optimization techniques",
+                                                "Interview preparation & mock tests",
+                                                "Job assistance & carrier guidance"
+                                            ].map((feature, idx) => (
+                                                <li key={idx} className="flex items-center gap-2">
+                                                    <div className="w-1.5 h-1.5 rounded-full bg-blue-500"></div>
+                                                    {feature}
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+
+                                    <div className="flex flex-wrap items-center gap-2 mb-8">
+                                        {course.tech.map((t, i) => (
+                                            <span key={i} className="text-sm font-semibold bg-gray-50 text-gray-700 px-4 py-2 rounded-xl border border-gray-200 group-hover:border-blue-200 group-hover:bg-blue-50/50 transition-colors">
+                                                {t}
+                                            </span>
+                                        ))}
+                                    </div>
+
+                                    <div className="flex items-center justify-between mt-auto">
+                                        <div className="text-gray-900 font-bold text-lg">
+                                            <span className="text-gray-400 font-normal text-sm block">Duration</span>
+                                            {course.duration}
+                                        </div>
+                                        <motion.button
+                                            whileTap={{ scale: 0.98 }}
+                                            onClick={() => openServiceModal('it', `Enroll: ${course.title}`)}
+                                            className="px-8 py-3 bg-gray-900 text-white rounded-xl font-bold flex items-center gap-2 hover:bg-blue-600 transition-colors shadow-lg shadow-gray-200"
+                                        >
+                                            View Details <ArrowRight size={16} />
+                                        </motion.button>
                                     </div>
                                 </div>
-                                <div className="p-8">
-                                    <h3 className="text-xl font-bold text-gray-900 mb-3 font-display">{course.title}</h3>
-                                    <div className="flex flex-wrap items-center gap-2 mb-6">
-                                        {course.tech.slice(0, 3).map((t, i) => (
-                                            <span key={i} className="text-xs font-bold bg-blue-50 text-blue-600 px-3 py-1 rounded-full">{t}</span>
-                                        ))}
-                                        {course.tech.length > 3 && <span className="text-xs font-bold bg-gray-50 text-gray-400 px-2 py-1 rounded-full">+{course.tech.length - 3}</span>}
-                                    </div>
-                                    <div className="flex justify-between items-center text-sm font-medium text-gray-500 mb-6 border-t border-gray-50 pt-4">
-                                        <span className="flex items-center gap-1"><Sparkles size={14} className="text-gold-400 fill-gold-400" /> {course.rating} ({course.reviews})</span>
-                                        <span>{course.level}</span>
-                                    </div>
-                                    <motion.button
-                                        whileTap={{ scale: 0.98 }}
-                                        onClick={() => openServiceModal('it', `Enroll: ${course.title}`)}
-                                        className="w-full py-4 bg-gray-900 text-white rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-blue-600 transition-colors shadow-lg shadow-gray-200"
-                                    >
-                                        Enroll Now <ArrowRight size={16} />
-                                    </motion.button>
+
+                                {/* Right Content: Image */}
+                                <div className={`flex-1 w-full h-64 md:h-80 relative rounded-[2rem] overflow-hidden group-hover:shadow-2xl transition-shadow duration-500 order-1 ${index % 2 === 0 ? 'md:order-2' : 'md:order-1'}`}>
+                                    <img
+                                        src={course.image}
+                                        alt={course.title}
+                                        className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none"></div>
                                 </div>
                             </div>
                         ))}
@@ -171,30 +217,102 @@ const ITServices = () => {
                 )}
             </div>
 
-            {/* Placement Stats & Partners */}
-            <section className="py-20 bg-slate-900 text-white rounded-t-[3rem] mt-auto">
+            {/* Process / Journey Section */}
+            <section className="py-20 bg-white/50 border-y border-white/50">
                 <div className="container-custom">
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20 text-center divide-x divide-slate-800">
+                    <div className="text-center max-w-3xl mx-auto mb-16">
+                        <span className="text-blue-600 font-bold tracking-widest uppercase text-xs mb-3 block">Your Path to Success</span>
+                        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 font-display">From Beginner to Professional</h2>
+                        <p className="text-gray-600 leading-relaxed">
+                            Our structured roadmap ensures you are ready for the industry challenges from day one.
+                        </p>
+                    </div>
+
+                    <div className="relative">
+                        {/* Connecting Line */}
+                        <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-gray-200 -z-10 hidden md:block border-t border-dashed border-gray-300"></div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+                            {[
+                                { step: "01", title: "Enroll & Assess", desc: "Skill gap analysis and personalized learning path." },
+                                { step: "02", title: "Master Skills", desc: "Intensive training with live coding sessions." },
+                                { step: "03", title: "Build Portfolio", desc: "Work on capstone projects and open source contribution." },
+                                { step: "04", title: "Get Hired", desc: "Mock interviews, resume prep, and placement drives." }
+                            ].map((item, idx) => (
+                                <div key={idx} className="bg-white p-8 rounded-3xl shadow-lg border border-gray-100 relative group hover:-translate-y-2 transition-transform duration-300">
+                                    <div className="w-12 h-12 bg-blue-600 text-white rounded-xl flex items-center justify-center font-bold text-lg mb-6 shadow-blue-200 shadow-md group-hover:scale-110 transition-transform">
+                                        {item.step}
+                                    </div>
+                                    <h3 className="text-xl font-bold text-gray-900 mb-3 font-display">{item.title}</h3>
+                                    <p className="text-gray-500 text-sm leading-relaxed">{item.desc}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Testimonials Section */}
+            <section className="py-20">
+                <div className="container-custom">
+                    <div className="flex flex-col md:flex-row justify-between items-end mb-12">
+                        <div className="max-w-xl">
+                            <span className="text-blue-600 font-bold tracking-widest uppercase text-xs mb-3 block">Success Stories</span>
+                            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 font-display">Hear from our Alumni</h2>
+                        </div>
+                        <button className="hidden md:block px-6 py-3 rounded-full border border-gray-200 font-bold text-gray-600 hover:bg-gray-50 transition-colors">
+                            View All Reviews
+                        </button>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        {[
+                            { name: "Priya Sharma", role: "Frontend Developer at Infosys", image: "https://randomuser.me/api/portraits/women/44.jpg", quote: "The live projects were a game changer. I could talk confidently about my code during the interview." },
+                            { name: "Rahul Verma", role: "Software Engineer at TCS", image: "https://randomuser.me/api/portraits/men/32.jpg", quote: "Mentors are very supportive. They helped me debug my code even late at night. improved my problem solving skills." },
+                            { name: "Anjali Gupta", role: "React Developer at Wipro", image: "https://randomuser.me/api/portraits/women/65.jpg", quote: "Sri Kanishka's placement team is amazing. They prepared me for HR rounds and technical tests thoroughly." }
+                        ].map((testimonial, idx) => (
+                            <div key={idx} className="p-8 rounded-[2rem] bg-indigo-50/50 hover:bg-white hover:shadow-xl border border-transparent hover:border-indigo-100 transition-all duration-300">
+                                <div className="flex items-center gap-4 mb-6">
+                                    <img src={testimonial.image} alt={testimonial.name} className="w-14 h-14 rounded-full border-2 border-white shadow-sm" />
+                                    <div>
+                                        <div className="font-bold text-gray-900">{testimonial.name}</div>
+                                        <div className="text-xs text-blue-600 font-medium">{testimonial.role}</div>
+                                    </div>
+                                </div>
+                                <div className="flex text-amber-400 mb-4 gap-1">
+                                    {[1, 2, 3, 4, 5].map((_, i) => <Star key={i} size={16} fill="currentColor" />)}
+                                </div>
+                                <p className="text-gray-600 italic leading-relaxed">"{testimonial.quote}"</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Placement Stats & Partners */}
+            <section className="py-20 bg-[#1F1209] text-white rounded-t-[3rem] mt-auto">
+                <div className="container-custom">
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20 text-center divide-x divide-white/10">
                         <div>
-                            <div className="text-4xl md:text-5xl font-bold text-amber-500 mb-2 font-display">500+</div>
-                            <div className="text-sm md:text-base text-slate-400 font-medium">Students Placed</div>
+                            <div className="text-4xl md:text-5xl font-bold text-gold-500 mb-2 font-display">500+</div>
+                            <div className="text-sm md:text-base text-gold-100/60 font-medium">Students Placed</div>
                         </div>
                         <div>
-                            <div className="text-4xl md:text-5xl font-bold text-amber-500 mb-2 font-display">24 LPA</div>
-                            <div className="text-sm md:text-base text-slate-400 font-medium">Highest Package</div>
+                            <div className="text-4xl md:text-5xl font-bold text-gold-500 mb-2 font-display">24 LPA</div>
+                            <div className="text-sm md:text-base text-gold-100/60 font-medium">Highest Package</div>
                         </div>
                         <div>
-                            <div className="text-4xl md:text-5xl font-bold text-amber-500 mb-2 font-display">50+</div>
-                            <div className="text-sm md:text-base text-slate-400 font-medium">Hiring Partners</div>
+                            <div className="text-4xl md:text-5xl font-bold text-gold-500 mb-2 font-display">50+</div>
+                            <div className="text-sm md:text-base text-gold-100/60 font-medium">Hiring Partners</div>
                         </div>
                         <div>
-                            <div className="text-4xl md:text-5xl font-bold text-amber-500 mb-2 font-display">92%</div>
-                            <div className="text-sm md:text-base text-slate-400 font-medium">Success Rate</div>
+                            <div className="text-4xl md:text-5xl font-bold text-gold-500 mb-2 font-display">92%</div>
+                            <div className="text-sm md:text-base text-gold-100/60 font-medium">Success Rate</div>
                         </div>
                     </div>
 
                     <div className="text-center">
-                        <p className="text-slate-400 text-sm uppercase tracking-widest mb-8 font-bold">Our Alumni Work At</p>
+                        <p className="text-gold-100/40 text-sm uppercase tracking-widest mb-8 font-bold">Our Alumni Work At</p>
                         <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
                             {['Google', 'Microsoft', 'Amazon', 'TCS', 'Infosys', 'Wipro'].map((company, i) => (
                                 <span key={i} className="text-xl md:text-2xl font-bold font-display text-white">{company}</span>

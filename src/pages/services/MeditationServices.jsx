@@ -22,20 +22,22 @@ const MeditationServices = () => {
     };
 
     return (
-        <div className="bg-white min-h-screen">
+        <div className="min-h-screen">
             {/* Zen Hero Section */}
-            <section className="relative pt-40 pb-20 lg:pt-52 lg:pb-32 overflow-hidden">
+            <section className="relative rounded-[2.5rem] margin-x-custom mx-4 md:mx-6 mb-16 overflow-hidden min-h-[600px] flex items-center shadow-2xl shadow-gold-100/50">
                 <div className="absolute inset-0 z-0">
                     <img src="/images/meditation/hero-meditation.png" alt="Meditation" className="w-full h-full object-cover" />
-                    {/* Clear Image - No Overlay */}
                 </div>
 
-                {/* Background Decor Layered on top of base but below content */}
-                <div className="absolute top-20 left-10 w-64 h-64 bg-gold-100/30 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob z-0"></div>
-                <div className="absolute top-40 right-10 w-64 h-64 bg-orange-100/30 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000 z-0"></div>
+                {/* Decorative Elements */}
+                <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gold-900/10 rounded-full blur-3xl -mr-20 -mt-20 pointer-events-none mix-blend-multiply"></div>
 
-                <div className="container-custom relative z-10 text-center">
-                    <div className="max-w-4xl mx-auto p-8 md:p-12 rounded-[3rem] bg-white/5 backdrop-blur-sm border border-white/10 shadow-xl relative overflow-hidden group">
+                <div className="container-custom relative z-10 px-8 md:px-12 py-12">
+                    <motion.div
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        className="max-w-3xl p-8 md:p-12 rounded-[2.5rem] bg-white/5 backdrop-blur-sm border border-white/10 shadow-xl relative overflow-hidden group"
+                    >
                         {/* Shimmer Effect */}
                         <div className="absolute inset-0 bg-gradient-to-br from-white/30 via-white/5 to-transparent opacity-30 pointer-events-none"></div>
 
@@ -47,114 +49,136 @@ const MeditationServices = () => {
                                 className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/60 backdrop-blur-md border border-white/50 text-gold-700 text-xs font-bold uppercase tracking-widest mb-8 shadow-sm ring-1 ring-white/50"
                             >
                                 <Sparkles size={14} className="text-gold-600" />
-                                <span>Inner Sanctuary</span>
+                                <span>Global Family • Friend • Guide</span>
                             </motion.div>
 
                             <motion.h1
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: 0.2, duration: 0.8 }}
-                                className="text-5xl md:text-7xl lg:text-8xl font-bold font-display text-gray-900 mb-8 leading-tight drop-shadow-sm"
+                                className="text-5xl md:text-7xl font-bold font-display text-gray-900 mb-8 leading-tight drop-shadow-sm"
                             >
-                                Find Peace in <br />
-                                <span className="text-gradient-gold relative py-2">
-                                    Stillness
-                                    <svg className="absolute w-full h-3 -bottom-1 left-0 text-gold-200/80 -z-10" viewBox="0 0 100 10" preserveAspectRatio="none">
-                                        <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="3" fill="none" />
-                                    </svg>
-                                </span>.
+                                Experience <br />
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold-600 to-amber-700">The Ocean of Love</span>
                             </motion.h1>
 
                             <motion.p
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: 0.4, duration: 0.8 }}
-                                className="text-xl md:text-2xl text-gray-800 leading-relaxed mb-12 max-w-3xl mx-auto font-medium"
+                                className="text-xl text-gray-800 leading-relaxed mb-12 max-w-2xl font-medium"
                             >
-                                Reconnect with your inner self through our guided meditation and spiritual awakening sessions. Ancient wisdom for the modern mind.
+                                "The cause of suffering is the lack of love. Love is the only power that heals." Embark on a journey of inner transformation to realize your True Self.
                             </motion.p>
 
                             <motion.div
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: 0.6, duration: 0.8 }}
-                                className="flex flex-col sm:flex-row items-center justify-center gap-4"
+                                className="flex flex-col sm:flex-row items-center gap-4"
                             >
                                 <button
-                                    onClick={() => openServiceModal('meditation', 'Book Meditation Session')}
-                                    className="btn-primary group shadow-gold-200/50"
+                                    onClick={() => openServiceModal('meditation', 'Book Spiritual Session')}
+                                    className="px-8 py-4 rounded-full font-bold transition-all shadow-lg hover:-translate-y-1 bg-gradient-to-r from-gold-500 to-amber-600 text-white shadow-gold-200"
                                 >
-                                    <Calendar size={18} className="mr-2" />
-                                    Book a Session
+                                    <span className="flex items-center gap-2"><Calendar size={18} /> Begin Transformation</span>
                                 </button>
-                                <button className="px-8 py-3 rounded-full font-sans font-semibold text-gray-800 bg-white/40 hover:bg-white border border-white/50 hover:border-gold-200 transition-all flex items-center gap-2 hover:shadow-lg">
-                                    Explore Programs <span className="group-hover:translate-x-1 transition-transform">→</span>
+                                <button className="px-8 py-4 rounded-full font-sans font-bold text-gray-900 bg-white/40 hover:bg-white border border-white/50 hover:border-gold-200 transition-all flex items-center gap-2 hover:shadow-lg">
+                                    Our Mission <span className="group-hover:translate-x-1 transition-transform">→</span>
                                 </button>
                             </motion.div>
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
             </section>
 
 
-            {/* Philosophy / Intro */}
-            <section className="py-24 bg-white relative">
+            {/* Maitreya Dadashreeji Section */}
+            <section className="py-20 relative">
                 <div className="container-custom">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                        <div className="relative">
-                            <div className="absolute -inset-4 bg-gold-50 rounded-[3rem] -z-10 transform -rotate-2"></div>
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+                        {/* Image Side */}
+                        <div className="relative group">
+                            <div className="absolute -inset-4 bg-gold-50 rounded-[3rem] -z-10 transform -rotate-2 group-hover:rotate-0 transition-transform duration-500"></div>
                             <img
-                                src="/images/meditation/zen-wellness.png" // Using existing image path or placeholder
-                                alt="Meditation Philosophy"
-                                className="rounded-[2.5rem] shadow-2xl w-full object-cover h-[600px]"
-                                onError={(e) => { e.target.src = 'https://images.unsplash.com/photo-1545205597-3d9d02c29597?auto=format&fit=crop&q=80&w=2000'; }} // Fallback
+                                src="/images/meditation/maitreya_dadashreeji.jpg.png"
+                                alt="Maitreya Dadashreeji"
+                                className="rounded-[2.5rem] shadow-2xl w-full object-cover h-[700px] transform group-hover:scale-[1.01] transition-transform duration-500"
                             />
-                            <div className="absolute bottom-10 -right-10 bg-white p-6 rounded-2xl shadow-xl max-w-xs hidden md:block">
-                                <div className="flex items-center gap-4 mb-3">
-                                    <div className="bg-gold-100 p-3 rounded-full text-gold-600">
-                                        <Heart size={24} fill="currentColor" />
-                                    </div>
-                                    <div>
-                                        <div className="font-bold text-gray-900 text-lg">Mindfulness</div>
-                                        <div className="text-sm text-gray-500">Daily Practice</div>
-                                    </div>
-                                </div>
-                                <p className="text-gray-600 text-sm leading-relaxed">"Quiet the mind, and the soul will speak."</p>
-                            </div>
                         </div>
 
+                        {/* Text Side */}
                         <div>
-                            <span className="text-gold-600 font-bold tracking-widest uppercase text-xs mb-4 block">The Science of Stillness</span>
-                            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8 font-display leading-tight">Journey into <br />Self-Discovery</h2>
-                            <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                                In a world that never stops, finding a moment of stillness is an act of rebellion and self-love. Our meditation practices are rooted in ancient Vedic traditions yet tailored for the contemporary lifestyle.
-                            </p>
-                            <p className="text-lg text-gray-600 leading-relaxed mb-10">
-                                Whether you are dealing with corporate burnout, relationship stress, or simply seeking spiritual growth, our guided sessions provide the tools you need.
-                            </p>
+                            <span className="text-gray-500 font-bold tracking-widest uppercase text-xs mb-2 block">Maitreya Dadashreeji</span>
+                            <h2 className="text-4xl md:text-5xl font-bold font-display mb-8 leading-tight">
+                                <span className="text-amber-600">A Transforming</span> <span className="text-gray-500 font-light">Presence</span>
+                            </h2>
 
-                            <div className="grid grid-cols-2 gap-8">
-                                <div className="border-l-4 border-gold-200 pl-6">
-                                    <h4 className="font-bold text-xl text-gray-900 mb-2">Vedic Wisdom</h4>
-                                    <p className="text-gray-500">Authentic teachings from certified masters.</p>
-                                </div>
-                                <div className="border-l-4 border-gold-200 pl-6">
-                                    <h4 className="font-bold text-xl text-gray-900 mb-2">Modern Approach</h4>
-                                    <p className="text-gray-500">Techniques adapted for busy, urban lives.</p>
-                                </div>
+                            <div className="prose prose-lg text-gray-800">
+                                <p className="mb-6">
+                                    Maitreya Dadashreeji is a Global Humanitarian, Transformation Pioneer and Social Reformer. Uplifting human consciousness, removing boundaries, bonding humanity and uniting nations together, He has guided many individuals by awakening the Love within them. Through His endeavours for Global Transformation, He is working to establish “One World, One Family.”
+                                </p>
+
+                                <h3 className="text-xl font-bold text-black mb-4">A Transforming Presence</h3>
+                                <p className="mb-6">
+                                    A humble presence, a tender smile and clad in all white, Maitreya Dadashreeji appears very simple to the human eye. Yet His powerful presence connects you not only with Him, but with yourself in a manner unimaginable. It takes you on an awakening journey deep into your inner self, whilst bringing your mind to a complete standstill.
+                                </p>
+                                <p className="mb-8">
+                                    His presence is one of unconditional love and peace. With Him, no tools or techniques are required, you simply have to be in His presence, and you will witness the change in your self.
+                                </p>
+
+                                <blockquote className="border-l-4 border-gold-400 pl-6 py-2 italic text-black bg-gold-50/50 rounded-r-xl my-8 font-medium">
+                                    “Before me, many have delivered teachings and techniques for your salvation and liberation. I am not here to repeat them, but to deliver that experience in your heart so that it becomes your own personal Truth.”
+                                </blockquote>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* Classes Grid */}
-            <section className="py-24 bg-gray-50">
+            {/* Mahavataar Babaji Section */}
+            <section className="py-20 relative bg-gray-50/50">
+                <div className="container-custom">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+                        {/* Text Side - Left on Desktop */}
+                        <div className="order-2 lg:order-1">
+                            <h2 className="text-4xl md:text-5xl font-bold font-display mb-8 leading-tight">
+                                <span className="text-amber-600">A Timeless</span> <span className="text-gray-500 font-light">Creation</span>
+                            </h2>
+
+                            <div className="prose prose-lg text-gray-800">
+                                <p className="mb-6">
+                                    Mahavataar Babaji, a timeless creation, has been on this planet Earth for the past 5000 years. His physical body looks like that of a young boy of around 25 years. The only cloth that He wears, is an orange dhoti (a piece of cloth) wrapped around the waist coming to just above the knees. However, His mystical physical manifestation occurs in various attires not limited to the dhoti.
+                                </p>
+                                <p className="mb-6">
+                                    He dwells high up in the Himalayan range away from any human habitat. There are 3-4 disciples with Him who learn and work for a higher cause. He is aware of all the events occurring in the world. The Divine energy has been exuding through each and every pore of His soft Divine body since thousands of years. He has never represented any cult, religion or specific spiritual technique but only 'The Truth'. He is peacefully resting in the state of dis-identification. He interacts with a few chosen ones to share and teach the Higher Knowledge at His will.
+                                </p>
+                                <p className="mb-6">
+                                    Divine Master Agastya, who received the Supreme Knowledge directly from Lord Shiv, imparted the same to young Babaji. As per instructions of Lord Shiv, Master Agastya relocated from the Himalayas to the southern region of India. This is where he met this young boy. As a disciple, Babaji surrendered completely at His Master's feet and followed everything that was taught to Him with faith and discipline.
+                                </p>
+                            </div>
+                        </div>
+
+                        {/* Image Side - Right on Desktop */}
+                        <div className="relative group order-1 lg:order-2">
+                            <div className="absolute -inset-4 bg-orange-100 rounded-[3rem] -z-10 transform rotate-2 group-hover:rotate-0 transition-transform duration-500"></div>
+                            <img
+                                src="/images/meditation/Mahavataar Babaji.png"
+                                alt="Mahavataar Babaji"
+                                className="rounded-[2.5rem] shadow-2xl w-full object-cover h-[700px] transform group-hover:scale-[1.01] transition-transform duration-500"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Offerings Grid */}
+            <section className="py-24 bg-rose-50/30">
                 <div className="container-custom">
                     <div className="text-center max-w-2xl mx-auto mb-16">
-                        <span className="text-gold-600 font-bold tracking-widest uppercase text-xs mb-3 block">Our Sessions</span>
-                        <h2 className="text-4xl font-bold text-gray-900 font-display mb-4">Choose Your Path</h2>
-                        <p className="text-gray-600 text-lg">Curated sessions designed to align with your daily rhythm.</p>
+                        <span className="text-gold-600 font-bold tracking-widest uppercase text-xs mb-3 block">Pathways to Awakening</span>
+                        <h2 className="text-4xl font-bold text-gray-900 font-display mb-4">Spiritual Offerings</h2>
+                        <p className="text-gray-600 text-lg">Sacred spaces and sessions to deepen your connection with the Divine.</p>
                     </div>
 
                     <motion.div
@@ -165,9 +189,9 @@ const MeditationServices = () => {
                         className="grid grid-cols-1 md:grid-cols-3 gap-8"
                     >
                         {[
-                            { icon: Sun, title: "Morning Flow", time: "6:00 AM - 7:00 AM", desc: "Awaken your energy centers and set a positive intention for the day.", active: true },
-                            { icon: Wind, title: "Breath & Mind", time: "12:00 PM - 1:00 PM", desc: "A mid-day reset to clear mental fog and restore focus.", active: false },
-                            { icon: Moon, title: "Deep Rest", time: "8:00 PM - 9:00 PM", desc: "Yoga Nidra and relaxation techniques for profound sleep.", active: false }
+                            { icon: Sun, title: "Bodhi Hyatt", time: "Weekly Sessions", desc: "Awakening sessions to experience the flow of divine energy and clarity.", active: true },
+                            { icon: Heart, title: "Maitri Sambodh", time: "Monthly Retreats", desc: "Deep immersion into the essence of Friendship and unconditional love.", active: false },
+                            { icon: Sparkles, title: "Transformation", time: "Advanced Program", desc: "A guided journey to dissolve internal blocks and realize your true potential.", active: false }
                         ].map((cls, idx) => (
                             <motion.div
                                 key={idx}
@@ -186,7 +210,7 @@ const MeditationServices = () => {
                                 </p>
 
                                 <button className={`mt-8 w-full py-3 rounded-xl font-bold text-sm transition-colors ${cls.active ? 'bg-gold-500 text-white hover:bg-gold-400' : 'bg-gray-100 text-gray-900 hover:bg-gold-50 hover:text-gold-600'}`}>
-                                    Book Now
+                                    Join Session
                                 </button>
                             </motion.div>
                         ))}
@@ -194,53 +218,69 @@ const MeditationServices = () => {
                 </div>
             </section>
 
-            {/* Benefits - Dark/Gold Elegant Section */}
-            <section className="py-24 bg-gray-900 text-white overflow-hidden relative">
+            {/* Core Values - Dark/Gold Elegant Section */}
+            <section className="py-24 bg-gray-900 text-white overflow-hidden relative rounded-[3rem] mx-4 md:mx-6 mb-16 shadow-2xl shadow-gray-900/40">
                 {/* Background Texture */}
                 <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(255,255,255,0.15) 1px, transparent 0)', backgroundSize: '40px 40px' }}></div>
 
                 <div className="container-custom relative z-10">
                     <div className="flex flex-col md:flex-row items-end justify-between mb-16 gap-6">
                         <div className="max-w-xl">
-                            <span className="text-gold-400 font-bold tracking-widest uppercase text-xs mb-3 block">Holistic Wellness</span>
-                            <h2 className="text-3xl md:text-5xl font-bold font-display leading-tight">Transformation <br />Inside & Out</h2>
+                            <span className="text-gold-400 font-bold tracking-widest uppercase text-xs mb-3 block">Our Essence</span>
+                            <h2 className="text-3xl md:text-5xl font-bold font-display leading-tight text-white">Love. Transform. <br />Serve.</h2>
                         </div>
-                        <button className="px-6 py-3 border border-gray-700 rounded-full hover:bg-gray-800 transition-colors text-sm font-semibold">
-                            View All Benefits
+                        <button className="px-6 py-3 border border-gray-700 rounded-full hover:bg-gray-800 transition-colors text-sm font-semibold text-white">
+                            Explore Teachings
                         </button>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                         {[
-                            { title: "Stress Reduction", desc: "Lower cortisol levels dramatically.", icon: Moon },
-                            { title: "Emotional Balance", desc: "Master your reactions and peace.", icon: Heart },
-                            { title: "Mental Clarity", desc: "Sharpen focus and cognitive power.", icon: Sun },
-                            { title: "Spiritual Growth", desc: "Connect with something greater.", icon: Star }
+                            { title: "Maitri", desc: "Establishing a bond of friendship with your Inner Divine.", icon: Heart },
+                            { title: "Sambodh", desc: "The awakening of true knowledge and awareness.", icon: Sun },
+                            { title: "Seva", desc: "Selfless service as an expression of love.", icon: Star },
+                            { title: "Shanti", desc: "Eternal peace beyond the fluctuations of the mind.", icon: Moon }
                         ].map((item, idx) => (
-                            <div key={idx} className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 p-8 rounded-3xl hover:bg-gray-800 transition-colors hover:-translate-y-1 duration-300">
-                                <item.icon className="text-gold-400 mb-4" size={32} />
-                                <h4 className="text-xl font-bold mb-2 font-display">{item.title}</h4>
-                                <p className="text-gray-400 text-sm leading-relaxed">{item.desc}</p>
+                            <div key={idx} className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 p-8 rounded-3xl hover:bg-gray-800 transition-colors hover:-translate-y-1 duration-300 group">
+                                <item.icon className="text-gold-400 mb-4 group-hover:text-gold-300 transition-colors" size={32} />
+                                <h4 className="text-xl font-bold mb-2 font-display text-white">{item.title}</h4>
+                                <p className="text-gray-400 text-sm leading-relaxed group-hover:text-gray-300 transition-colors">{item.desc}</p>
                             </div>
                         ))}
                     </div>
                 </div>
             </section>
 
-            {/* CTA Section */}
-            <section className="py-24 bg-white text-center relative overflow-hidden">
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gold-50/50 rounded-full blur-3xl -z-10"></div>
+            {/* Meditation Stats & Partners - Footer Style */}
+            <section className="py-20 bg-[#1F1209] text-white rounded-t-[3rem] mt-auto">
                 <div className="container-custom">
-                    <h2 className="text-5xl md:text-6xl font-display font-bold text-gray-900 mb-6">Begin Your Journey</h2>
-                    <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
-                        Your path to peace is just one breath away. Join our community today.
-                    </p>
-                    <button
-                        onClick={() => openServiceModal('meditation', 'Book Meditation Session')}
-                        className="btn-primary transform hover:scale-105"
-                    >
-                        Start Free Trial
-                    </button>
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20 text-center divide-x divide-white/10">
+                        <div>
+                            <div className="text-4xl md:text-5xl font-bold text-gold-500 mb-2 font-display">5000+</div>
+                            <div className="text-sm md:text-base text-gold-100/60 font-medium">Sessions Guided</div>
+                        </div>
+                        <div>
+                            <div className="text-4xl md:text-5xl font-bold text-gold-500 mb-2 font-display">15+</div>
+                            <div className="text-sm md:text-base text-gold-100/60 font-medium">Expert Gurus</div>
+                        </div>
+                        <div>
+                            <div className="text-4xl md:text-5xl font-bold text-gold-500 mb-2 font-display">98%</div>
+                            <div className="text-sm md:text-base text-gold-100/60 font-medium">Satisfaction Rate</div>
+                        </div>
+                        <div>
+                            <div className="text-4xl md:text-5xl font-bold text-gold-500 mb-2 font-display">4.9/5</div>
+                            <div className="text-sm md:text-base text-gold-100/60 font-medium">User Rating</div>
+                        </div>
+                    </div>
+
+                    <div className="text-center">
+                        <p className="text-gold-100/40 text-sm uppercase tracking-widest mb-8 font-bold">Recognized By</p>
+                        <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
+                            {['Yoga Alliance', 'Headspace', 'Calm', 'Mindful', 'Chopra Center', 'Art of Living'].map((company, i) => (
+                                <span key={i} className="text-xl md:text-2xl font-bold font-display text-white">{company}</span>
+                            ))}
+                        </div>
+                    </div>
                 </div>
             </section>
         </div >

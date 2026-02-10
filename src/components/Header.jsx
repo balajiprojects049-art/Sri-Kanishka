@@ -31,27 +31,31 @@ const Header = () => {
     return (
         <>
             <header
-                className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 border-b ${isScrolled ? 'bg-white/95 backdrop-blur-md shadow-sm py-3 border-gray-100' : 'bg-white/5 backdrop-blur-sm py-5 border-white/10'
+                className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 border-b ${isScrolled ? 'bg-white/90 backdrop-blur-md shadow-md py-3 border-white/20' : 'bg-white/10 backdrop-blur-md py-4 border-white/10 shadow-sm'
                     }`}
             >
                 <div className="container-custom flex items-center justify-between">
                     <Link to="/" className="flex items-center gap-3 text-2xl font-semibold transform hover:scale-105 transition-transform duration-300" aria-label="Go to homepage">
-                        <img src="/logo.png" alt="Sri Kanishka Associates" className="h-20 w-auto object-contain mix-blend-multiply" />
+                        <img src="/logo.png" alt="Sri Kanishka Associates" className="h-16 w-auto object-contain" />
                         <span className="sr-only">Sri Kanishka Associates</span>
                     </Link>
 
-                    {/* Desktop Nav */}
+                    {/* Desktop nav */}
                     <nav className="hidden md:flex items-center space-x-8">
-                        <Link to="/" className={`font-bold text-sm tracking-wide transition-colors ${location.pathname === '/' ? 'text-gold-600' : 'text-gray-900 hover:text-gold-600'}`}>HOME</Link>
+                        <Link to="/" className={`relative group py-2 font-bold text-sm tracking-wide transition-colors ${isScrolled ? (location.pathname === '/' ? 'text-gold-600' : 'text-gray-900 hover:text-gold-600') : 'text-white drop-shadow-md hover:text-gold-100'}`}>
+                            HOME
+                            <span className={`absolute bottom-0 left-0 h-0.5 bg-current transition-all duration-300 ease-out ${location.pathname === '/' ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
+                        </Link>
 
                         <div
                             className="relative group"
                             onMouseEnter={() => setHoveredService(true)}
                             onMouseLeave={() => setHoveredService(false)}
                         >
-                            <button className={`flex items-center space-x-1 font-bold text-sm tracking-wide transition-colors ${location.pathname.includes('/services') ? 'text-gold-600' : 'text-gray-900 group-hover:text-gold-600'}`}>
+                            <button className={`flex items-center space-x-1 relative py-2 font-bold text-sm tracking-wide transition-colors ${isScrolled ? (location.pathname.includes('/services') ? 'text-gold-600' : 'text-gray-900 hover:text-gold-600') : 'text-white drop-shadow-md hover:text-gold-100'}`}>
                                 <span>SERVICES</span>
                                 <ChevronDown size={14} className="group-hover:rotate-180 transition-transform duration-300" />
+                                <span className={`absolute bottom-0 left-0 h-0.5 bg-current transition-all duration-300 ease-out ${location.pathname.includes('/services') ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
                             </button>
 
                             {/* Mega Menu */}
@@ -89,14 +93,21 @@ const Header = () => {
                             </AnimatePresence>
                         </div>
 
-                        <Link to="/about" className={`font-bold text-sm tracking-wide transition-colors ${location.pathname === '/about' ? 'text-gold-600' : 'text-gray-900 hover:text-gold-600'}`}>ABOUT</Link>
-                        <Link to="/contact" className={`font-bold text-sm tracking-wide transition-colors ${location.pathname === '/contact' ? 'text-gold-600' : 'text-gray-900 hover:text-gold-600'}`}>CONTACT</Link>
+
+                        <Link to="/about" className={`relative group py-2 font-bold text-sm tracking-wide transition-colors ${isScrolled ? (location.pathname === '/about' ? 'text-gold-600' : 'text-gray-900 hover:text-gold-600') : 'text-white drop-shadow-md hover:text-gold-100'}`}>
+                            ABOUT
+                            <span className={`absolute bottom-0 left-0 h-0.5 bg-current transition-all duration-300 ease-out ${location.pathname === '/about' ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
+                        </Link>
+                        <Link to="/contact" className={`relative group py-2 font-bold text-sm tracking-wide transition-colors ${isScrolled ? (location.pathname === '/contact' ? 'text-gold-600' : 'text-gray-900 hover:text-gold-600') : 'text-white drop-shadow-md hover:text-gold-100'}`}>
+                            CONTACT
+                            <span className={`absolute bottom-0 left-0 h-0.5 bg-current transition-all duration-300 ease-out ${location.pathname === '/contact' ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
+                        </Link>
                     </nav>
 
                     <div className="hidden md:flex items-center space-x-4">
                         <button
                             onClick={openLogin}
-                            className="flex items-center space-x-2 px-6 py-2.5 btn-primary"
+                            className={`flex items-center space-x-2 px-6 py-2.5 rounded-full font-sans font-semibold transition-all duration-300 shadow-lg ${isScrolled ? 'bg-gradient-to-r from-gold-500 to-gold-600 text-white hover:shadow-gold-200' : 'bg-white text-gold-600 hover:bg-gold-50'}`}
                         >
                             <User size={16} />
                             <span>Login</span>

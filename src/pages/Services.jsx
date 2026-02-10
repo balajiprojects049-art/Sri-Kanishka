@@ -39,7 +39,7 @@ const Services = () => {
     ];
 
     return (
-        <div className="pt-24 min-h-screen bg-white">
+        <div className="pt-24 min-h-screen">
             <div className="container-custom py-12">
                 {/* Header */}
                 <div className="text-center mb-16 relative">
