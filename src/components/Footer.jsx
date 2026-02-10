@@ -28,6 +28,7 @@ const Footer = () => {
         <footer className="bg-[#1F1209] pt-24 pb-12 border-t border-white/5 relative overflow-hidden">
             {/* Background Gradient Effect */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none"></div>
+            <div className="absolute inset-0 opacity-[0.07] pointer-events-none" style={{ backgroundImage: 'url("https://www.transparenttextures.com/patterns/hexellence.png")' }}></div>
             <div className="absolute -top-24 -right-24 w-96 h-96 bg-gold-500/5 rounded-full blur-3xl pointer-events-none"></div>
             <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-rose-500/5 rounded-full blur-3xl pointer-events-none"></div>
 
