@@ -113,7 +113,7 @@ const About = () => {
                             { title: "Excellence", desc: "We strive for perfection in training, matchmaking, and guidance.", icon: Sparkles, color: "blue" },
                             { title: "Compassion", desc: "We serve with a heart full of empathy and understanding.", icon: Heart, color: "rose" }
                         ].map((item, idx) => (
-                            <div key={idx} className="bg-gray-50 rounded-3xl p-8 text-center hover:bg-white hover:shadow-xl transition-all duration-300 group">
+                            <div key={idx} className="bg-white/40 border border-gray-100/50 rounded-3xl p-8 text-center hover:bg-white hover:shadow-xl transition-all duration-300 group">
                                 <div className={`w-14 h-14 mx-auto rounded-full bg-${item.color}-100 text-${item.color}-600 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
                                     <item.icon size={24} />
                                 </div>
@@ -136,7 +136,7 @@ const About = () => {
                                 <div className="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-gold-100 shadow-md shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 group-hover:bg-gold-500 group-hover:text-white transition-all duration-300 text-gold-600 font-bold text-xs transform group-hover:scale-110">
                                     {item.year.slice(-2)}
                                 </div>
-                                <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-gray-100 group-hover:border-gold-200 group-hover:shadow-md transition-all duration-300 relative">
+                                <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white/70 p-6 md:p-8 rounded-3xl shadow-sm border border-gray-100 group-hover:border-gold-200 group-hover:shadow-md transition-all duration-300 relative">
                                     {/* Arrow for desktop */}
                                     <div className={`hidden md:block absolute top-1/2 -translate-y-1/2 w-4 h-4 bg-white border-t border-r border-gray-100 rotate-45 ${idx % 2 === 0 ? '-right-2.5 border-r-gold-200 border-t-gold-200' : '-left-2.5 border-l-gold-200 border-b-gold-200'} `}></div>
 

@@ -109,7 +109,7 @@ const MarriageServices = () => {
             </section>
 
             {/* Approach Text */}
-            <section className="py-16 bg-rose-50/50">
+            <section className="py-16">
                 <div className="container-custom">
                     <div className="max-w-4xl mx-auto text-center">
                         <span className="text-rose-500 font-bold tracking-widest uppercase text-xs mb-3 block">Our Commitment</span>
@@ -125,7 +125,7 @@ const MarriageServices = () => {
             </section>
 
             {/* Royal Gold Experience Section */}
-            <section className="py-20 bg-gradient-to-b from-rose-50 to-white overflow-hidden">
+            <section className="py-20 overflow-hidden">
                 <div className="container-custom">
                     <div className="flex flex-col lg:flex-row items-center gap-16 mb-24">
                         <div className="lg:w-1/2 relative group">
@@ -243,7 +243,7 @@ const MarriageServices = () => {
                             { title: "Personalized Support", desc: "Dedicated relationship managers to help you search.", icon: Users },
                             { title: "25+ Years of Trust", desc: "Helping families unite across generations with integrity.", icon: Heart }
                         ].map((feature, idx) => (
-                            <div key={idx} className="bg-rose-50 p-8 rounded-3xl hover:bg-white hover:shadow-xl transition-all duration-300 border border-rose-100 group">
+                            <div key={idx} className="bg-white/80 backdrop-blur-sm p-8 rounded-3xl hover:bg-white hover:shadow-xl transition-all duration-300 border border-rose-100 group">
                                 <div className="w-14 h-14 bg-white rounded-full flex items-center justify-center text-rose-500 mb-6 shadow-sm group-hover:scale-110 transition-transform">
                                     <feature.icon size={28} />
                                 </div>

@@ -73,7 +73,7 @@ const ITServices = () => {
                             { title: "Placement Support", desc: "Dedicated HR team for resume building and interview coaching.", icon: Briefcase },
                             { title: "Corporate Consultancy", desc: "We provide specialized staffing and corporate training solutions.", icon: Database }
                         ].map((feature, idx) => (
-                            <div key={idx} className="p-6 rounded-3xl bg-slate-50 border border-slate-100 hover:bg-white hover:shadow-xl hover:border-blue-100 transition-all duration-300 group">
+                            <div key={idx} className="p-6 rounded-3xl bg-white/40 border border-slate-100 hover:bg-white hover:shadow-xl hover:border-blue-100 transition-all duration-300 group">
                                 <div className="w-12 h-12 bg-white rounded-2xl shadow-sm text-blue-600 flex items-center justify-center mb-4 border border-slate-100 group-hover:scale-110 transition-transform">
                                     <feature.icon size={24} />
                                 </div>
@@ -86,7 +86,7 @@ const ITServices = () => {
             </section>
 
             {/* Methodology Text */}
-            <section className="py-20 bg-white rounded-[3rem] mx-4 md:mx-6 mb-20 shadow-xl shadow-gold-900/10 relative overflow-hidden">
+            <section className="py-20 bg-white/40 backdrop-blur-md rounded-[3rem] mx-4 md:mx-6 mb-20 shadow-xl shadow-gold-900/10 relative overflow-hidden">
                 {/* Decorative Background */}
                 <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-600"></div>
                 <div className="absolute -left-20 top-20 w-64 h-64 bg-blue-50 rounded-full blur-3xl opacity-50 pointer-events-none"></div>
@@ -218,7 +218,7 @@ const ITServices = () => {
             </div>
 
             {/* Process / Journey Section */}
-            <section className="py-20 bg-white/50 border-y border-white/50">
+            <section className="py-20 border-y border-white/50">
                 <div className="container-custom">
                     <div className="text-center max-w-3xl mx-auto mb-16">
                         <span className="text-blue-600 font-bold tracking-widest uppercase text-xs mb-3 block">Your Path to Success</span>

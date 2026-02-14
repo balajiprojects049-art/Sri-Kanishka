@@ -22,7 +22,7 @@ const Home = () => {
     const statIcons = [Users, Briefcase, Heart, Sun];
 
     return (
-        <div className="overflow-hidden bg-gray-50/30">
+        <div className="overflow-hidden">
             {/* Hero Section */}
             <section className="relative min-h-[95vh] flex items-center justify-center overflow-hidden">
                 <div className="absolute inset-0 z-0">
@@ -71,13 +71,13 @@ const Home = () => {
                         </div>
                     </motion.div>
 
-                    <div className="hidden lg:block relative h-[600px]">
+                    <div className="hidden lg:block relative h-[600px] w-full">
                         {/* Floating Cards */}
                         <motion.div
                             initial={{ opacity: 0, y: 50 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.4, duration: 0.8 }}
-                            className="absolute top-10 right-10 z-20"
+                            className="absolute top-8 right-4 z-20"
                         >
                             <div className="bg-white/90 backdrop-blur-xl p-6 rounded-3xl shadow-2xl border border-white/50 w-72 transform rotate-6 hover:rotate-0 transition-transform duration-500">
                                 <div className="flex items-center gap-4 mb-4">
@@ -96,12 +96,34 @@ const Home = () => {
                         </motion.div>
 
                         <motion.div
+                            initial={{ opacity: 0, scale: 0.8 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            transition={{ delay: 0.5, duration: 0.8 }}
+                            className="absolute top-1/2 left-1/2 transform -translate-x-1/4 -translate-y-1/2 z-30"
+                        >
+                            <div className="bg-white/90 backdrop-blur-xl p-6 rounded-3xl shadow-2xl border border-white/50 w-72 transform -rotate-2 hover:rotate-0 transition-transform duration-500">
+                                <div className="flex items-center gap-4 mb-4">
+                                    <div className="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center text-purple-600">
+                                        <Flower size={24} />
+                                    </div>
+                                    <div>
+                                        <h4 className="font-bold text-gray-900">Inner Peace</h4>
+                                        <div className="flex text-gold-400 text-xs">
+                                            {[1, 2, 3, 4, 5].map(i => <Star key={i} size={10} fill="currentColor" />)}
+                                        </div>
+                                    </div>
+                                </div>
+                                <p className="text-sm text-gray-600">"Found clarity and serenity through the spiritual mindfulness sessions."</p>
+                            </div>
+                        </motion.div>
+
+                        <motion.div
                             initial={{ opacity: 0, y: 50 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.6, duration: 0.8 }}
-                            className="absolute bottom-20 left-10 z-20"
+                            className="absolute bottom-10 left-0 z-20"
                         >
-                            <div className="bg-white/90 backdrop-blur-xl p-6 rounded-3xl shadow-2xl border border-white/50 w-72 transform -rotate-3 hover:rotate-0 transition-transform duration-500">
+                            <div className="bg-white/90 backdrop-blur-xl p-6 rounded-3xl shadow-2xl border border-white/50 w-72 transform -rotate-6 hover:rotate-0 transition-transform duration-500">
                                 <div className="flex items-center gap-4 mb-4">
                                     <div className="w-12 h-12 rounded-full bg-rose-100 flex items-center justify-center text-rose-600">
                                         <Heart size={24} />
@@ -120,7 +142,7 @@ const Home = () => {
 
 
             {/* Upcoming Events Section */}
-            <section className="py-24 relative overflow-hidden border-y border-gray-100 bg-white">
+            <section className="py-24 relative overflow-hidden border-y border-gray-100/20">
                 <div className="container-custom text-center">
                     <motion.span
                         initial={{ opacity: 0 }}
@@ -166,9 +188,9 @@ const Home = () => {
                             viewport={{ once: true }}
                             className="space-y-6"
                         >
-                            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 font-display">Maitri Havan</h3>
+                            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 font-display">Vedic Havan</h3>
                             <p className="text-gray-600 text-lg leading-relaxed max-w-3xl mx-auto">
-                                Havan (sacred fire ritual) is a powerful Vedic process, conducted as a prayer offering to the Divine. Through Maitri Havan, one can offer a personal prayer relating to any facet of life – spiritual, material, relationship, well-being, and so on – to help one grow and move ahead in life.
+                                Havan (sacred fire ritual) is a powerful Vedic process, conducted as a prayer offering to the Divine. Through Vedic Havan, one can offer a personal prayer relating to any facet of life – spiritual, material, relationship, well-being, and so on – to help one grow and move ahead in life.
                             </p>
                             <Link
                                 to="/services/maitri-havan"
@@ -184,7 +206,7 @@ const Home = () => {
             {/* Stats Section */}
             <section className="py-16 -mt-10 relative z-30">
                 <div className="container-custom">
-                    <div className="bg-white rounded-[2rem] shadow-xl p-8 md:p-12 border border-gray-100">
+                    <div className="bg-white/90 backdrop-blur-sm rounded-[2rem] shadow-xl p-8 md:p-12 border border-gray-100">
                         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 divide-x divide-gray-100">
                             {stats.map((stat, idx) => {
                                 const Icon = statIcons[idx];
@@ -237,7 +259,7 @@ const Home = () => {
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {/* Service Cards */}
-                        <Link to="/services/it" className="group relative bg-white rounded-[2.5rem] overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-white/50">
+                        <Link to="/services/it" className="group relative bg-white/90 backdrop-blur-sm rounded-[2.5rem] overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-white/50">
                             <div className="h-64 overflow-hidden relative">
                                 <div className="absolute inset-0 bg-blue-600/20 group-hover:bg-blue-600/10 transition-colors z-10"></div>
                                 <img src="/images/it/cyber-security.png" alt="IT Services" className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" />
@@ -248,7 +270,7 @@ const Home = () => {
                                 </div>
                             </div>
                             <div className="p-8">
-                                <h3 className="text-2xl font-bold text-gray-900 mb-3 font-display group-hover:text-blue-600 transition-colors">IT Training</h3>
+                                <h3 className="text-2xl font-bold text-gray-900 mb-3 font-display group-hover:text-blue-600 transition-colors">IT Services & Placements</h3>
                                 <p className="text-gray-600 leading-relaxed mb-6">Master Full Stack, Cloud, and AI with our intensive bootcamps designed for the modern industry.</p>
                                 <div className="flex items-center text-blue-600 font-bold group-hover:gap-2 transition-all">
                                     Explore Courses <ArrowRight size={18} className="ml-2" />
@@ -256,7 +278,7 @@ const Home = () => {
                             </div>
                         </Link>
 
-                        <Link to="/services/marriage" className="group relative bg-white rounded-[2.5rem] overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-white/50">
+                        <Link to="/services/marriage" className="group relative bg-white/90 backdrop-blur-sm rounded-[2.5rem] overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-white/50">
                             <div className="h-64 overflow-hidden relative">
                                 <div className="absolute inset-0 bg-rose-600/20 group-hover:bg-rose-600/10 transition-colors z-10"></div>
                                 <img src="/images/marriage/rings-bg.jpg" alt="Marriage Services" className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" />
@@ -275,7 +297,7 @@ const Home = () => {
                             </div>
                         </Link>
 
-                        <Link to="/services/meditation" className="group relative bg-white rounded-[2.5rem] overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                        <Link to="/services/meditation" className="group relative bg-white/90 backdrop-blur-sm rounded-[2.5rem] overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
                             <div className="h-64 overflow-hidden relative">
                                 <div className="absolute inset-0 bg-purple-600/20 group-hover:bg-purple-600/10 transition-colors z-10"></div>
                                 <img src="/images/meditation/hero-meditation.png" onError={(e) => e.currentTarget.src = 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&q=80&w=800'} alt="Meditation Services" className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" />
@@ -286,7 +308,7 @@ const Home = () => {
                                 </div>
                             </div>
                             <div className="p-8">
-                                <h3 className="text-2xl font-bold text-gray-900 mb-3 font-display group-hover:text-purple-600 transition-colors">Inner Peace</h3>
+                                <h3 className="text-2xl font-bold text-gray-900 mb-3 font-display group-hover:text-purple-600 transition-colors">Inner Peace & spiritual</h3>
                                 <p className="text-gray-600 leading-relaxed mb-6">Reconnect with yourself through guided meditation, spiritual retreats, and mindfulness practices.</p>
                                 <div className="flex items-center text-purple-600 font-bold group-hover:gap-2 transition-all">
                                     Start Journey <ArrowRight size={18} className="ml-2" />
@@ -298,7 +320,7 @@ const Home = () => {
             </section>
 
             {/* Impact Section - Combined with How It Works visually */}
-            <section className="py-24 bg-white relative overflow-hidden">
+            <section className="py-24 relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-gold-50/50 rounded-full blur-3xl -mr-40 -mt-40 pointer-events-none"></div>
 
                 <div className="container-custom relative z-10">
@@ -348,7 +370,7 @@ const Home = () => {
             </section>
 
             {/* Testimonials */}
-            <section className="py-24 relative overflow-hidden bg-gray-50/50">
+            <section className="py-24 relative overflow-hidden">
                 <div className="container-custom relative">
                     <div className="text-center mb-16">
                         <span className="text-gold-600 font-bold uppercase tracking-widest text-xs">Testimonials</span>
@@ -356,7 +378,7 @@ const Home = () => {
                     </div>
 
                     <div className="max-w-5xl mx-auto">
-                        <div className="bg-white rounded-[3rem] p-8 md:p-16 shadow-xl relative min-h-[400px] flex flex-col items-center text-center justify-center border border-gray-100">
+                        <div className="bg-white/90 backdrop-blur-sm rounded-[3rem] p-8 md:p-16 shadow-xl relative min-h-[400px] flex flex-col items-center text-center justify-center border border-gray-100">
                             <div className="absolute top-0 -translate-y-1/2 bg-gradient-to-r from-gold-400 to-amber-500 text-white p-6 rounded-full shadow-lg shadow-gold-200">
                                 <Quote size={32} />
                             </div>
@@ -418,7 +440,7 @@ const Home = () => {
                                 { q: "How does the matrimony service work?", a: "Our team curates matches based on preferences and conducts profiles screening and counseling." },
                                 { q: "Do you offer trial sessions?", a: "Yes — many programs include demo sessions or an initial consultation to help you decide." }
                             ].map((faq, i) => (
-                                <details key={i} className="group bg-white rounded-2xl border border-gray-100 overflow-hidden open:shadow-md transition-shadow">
+                                <details key={i} className="group bg-white/90 backdrop-blur-sm rounded-2xl border border-gray-100 overflow-hidden open:shadow-md transition-shadow">
                                     <summary className="font-bold cursor-pointer p-6 list-none flex justify-between items-center text-gray-800">
                                         {faq.q}
                                         <span className="transform group-open:rotate-180 transition-transform duration-300 text-gold-500">

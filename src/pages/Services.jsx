@@ -71,7 +71,7 @@ const Services = () => {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {isLoading ? (
                         [1, 2, 3].map((i) => (
-                            <div key={i} className="bg-white rounded-[2rem] p-8 border border-gray-100 h-[350px] animate-pulse relative overflow-hidden">
+                            <div key={i} className="bg-white/80 backdrop-blur-sm rounded-[2rem] p-8 border border-gray-100 h-[350px] animate-pulse relative overflow-hidden">
                                 <div className="absolute inset-0 bg-gradient-to-br from-transparent to-gray-50/50"></div>
                                 <div className="w-16 h-16 bg-gray-100 rounded-2xl mb-8"></div>
                                 <div className="h-8 bg-gray-100 rounded-full w-3/4 mb-4"></div>
@@ -87,7 +87,7 @@ const Services = () => {
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: idx * 0.1 }}
-                                className="bg-white rounded-[2rem] p-8 card-shadow border border-gray-100 hover:border-gold-200 transition-all duration-300 group h-full flex flex-col relative overflow-hidden"
+                                className="bg-white/90 backdrop-blur-sm rounded-[2rem] p-8 card-shadow border border-gray-100 hover:border-gold-200 transition-all duration-300 group h-full flex flex-col relative overflow-hidden"
                             >
                                 <div className={`absolute top-0 right-0 p-12 opacity-0 group-hover:opacity-5 transition-opacity duration-500`}>
                                     <service.icon size={150} className={`text-${service.color}-500`} />

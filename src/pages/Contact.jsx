@@ -26,7 +26,7 @@ const Contact = () => {
     };
 
     return (
-        <div className="min-h-screen bg-gray-50/30">
+        <div className="min-h-screen">
             {/* Hero Section */}
             <section className="relative pt-40 pb-20 overflow-hidden mb-20">
                 <div className="absolute inset-0 z-0">
@@ -83,7 +83,7 @@ const Contact = () => {
                                     initial={{ opacity: 0, x: -20 }}
                                     animate={{ opacity: 1, x: 0 }}
                                     transition={{ delay: 0.3 + (idx * 0.1) }}
-                                    className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex items-start gap-5 hover:shadow-md hover:border-blue-100 transition-all group"
+                                    className="bg-white/90 backdrop-blur-sm p-6 rounded-2xl shadow-sm border border-gray-100 flex items-start gap-5 hover:shadow-md hover:border-blue-100 transition-all group"
                                 >
                                     <div className={`p-4 rounded-xl bg-${item.color}-50 text-${item.color}-600 group-hover:bg-${item.color}-100 transition-colors`}>
                                         <item.icon size={24} />
@@ -117,7 +117,7 @@ const Contact = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.4 }}
-                        className="lg:col-span-7 bg-white rounded-[2.5rem] shadow-xl p-8 md:p-12 border border-gray-100 relative overflow-hidden"
+                        className="lg:col-span-7 bg-white/90 backdrop-blur-sm rounded-[2.5rem] shadow-xl p-8 md:p-12 border border-gray-100 relative overflow-hidden"
                     >
                         <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-gold-100/40 to-transparent rounded-full blur-3xl -mr-20 -mt-20 pointer-events-none"></div>
 

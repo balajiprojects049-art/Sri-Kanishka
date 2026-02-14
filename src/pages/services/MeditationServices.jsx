@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Flower, Sun, Moon, Wind, Calendar, Sparkles, Heart, Star } from 'lucide-react';
+import { Flower, Sun, Moon, Wind, Calendar, Sparkles, Heart, Star, Clock, Leaf, Home, Users } from 'lucide-react';
 import { useUI } from '../../context/UIContext';
 import { Link } from 'react-router-dom';
 
@@ -131,6 +131,15 @@ const MeditationServices = () => {
                                 <blockquote className="border-l-4 border-gold-400 pl-6 py-2 italic text-black bg-gold-50/50 rounded-r-xl my-8 font-medium">
                                     “Before me, many have delivered teachings and techniques for your salvation and liberation. I am not here to repeat them, but to deliver that experience in your heart so that it becomes your own personal Truth.”
                                 </blockquote>
+
+                                <div className="flex flex-wrap gap-4 mt-8">
+                                    <button className="px-8 py-3 rounded-full bg-gradient-to-r from-gold-50/80 to-amber-50/80 backdrop-blur-md text-gold-700 font-bold border border-gold-500 shadow-lg shadow-gold-100/50 cursor-default flex items-center gap-3 hover:scale-105 transition-transform duration-300">
+                                        <div className="p-1.5 bg-white rounded-full text-gold-600 shadow-sm">
+                                            <Clock size={16} />
+                                        </div>
+                                        <span className="tracking-wide uppercase text-xs">Coming Soon</span>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -138,7 +147,7 @@ const MeditationServices = () => {
             </section>
 
             {/* Mahavataar Babaji Section */}
-            <section className="py-20 relative bg-gray-50/50">
+            <section className="py-20 relative">
                 <div className="container-custom">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
                         {/* Text Side - Left on Desktop */}
@@ -157,8 +166,18 @@ const MeditationServices = () => {
                                 <p className="mb-6">
                                     Divine Master Agastya, who received the Supreme Knowledge directly from Lord Shiv, imparted the same to young Babaji. As per instructions of Lord Shiv, Master Agastya relocated from the Himalayas to the southern region of India. This is where he met this young boy. As a disciple, Babaji surrendered completely at His Master's feet and followed everything that was taught to Him with faith and discipline.
                                 </p>
+
+                                <div className="flex flex-wrap gap-4 mt-8">
+                                    <button className="px-8 py-3 rounded-full bg-gradient-to-r from-gold-50/80 to-amber-50/80 backdrop-blur-md text-gold-700 font-bold border border-gold-500 shadow-lg shadow-gold-100/50 cursor-default flex items-center gap-3 hover:scale-105 transition-transform duration-300">
+                                        <div className="p-1.5 bg-white rounded-full text-gold-600 shadow-sm">
+                                            <Clock size={16} />
+                                        </div>
+                                        <span className="tracking-wide uppercase text-xs">Coming Soon</span>
+                                    </button>
+                                </div>
                             </div>
                         </div>
+
 
                         {/* Image Side - Right on Desktop */}
                         <div className="relative group order-1 lg:order-2">
@@ -173,8 +192,108 @@ const MeditationServices = () => {
                 </div>
             </section>
 
+            {/* Ayurvedic Wellness Section */}
+            <section className="py-24 relative overflow-hidden bg-white/30 backdrop-blur-sm">
+                <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-green-50/50 rounded-full blur-3xl opacity-60 mix-blend-multiply pointer-events-none"></div>
+
+                <div className="container-custom relative z-10">
+                    <div className="flex flex-col md:flex-row items-center gap-16">
+                        <div className="md:w-1/2">
+                            <span className="text-green-600 font-bold tracking-widest uppercase text-xs mb-3 block">Natural Harmony</span>
+                            <h2 className="text-4xl md:text-5xl font-bold font-display text-gray-900 mb-8 leading-tight">
+                                <span className="text-gray-900">Holistic</span> <span className="text-green-600">Ayurvedic Healing</span>
+                            </h2>
+                            <p className="text-xl text-gray-700 leading-relaxed mb-8">
+                                Embark on a journey to wellness with our tailored Ayurvedic guidance. We believe that true healing comes from within and is supported by nature's timeless wisdom.
+                            </p>
+
+                            <div className="space-y-6">
+                                <div className="flex gap-4 group">
+                                    <div className="w-12 h-12 rounded-xl bg-green-100 flex items-center justify-center text-green-700 shrink-0 shadow-sm group-hover:scale-110 transition-transform">
+                                        <Leaf size={24} />
+                                    </div>
+                                    <div>
+                                        <h4 className="font-bold text-lg text-gray-900 mb-1">Tailored Medicines</h4>
+                                        <p className="text-gray-600 leading-relaxed">Personalized Ayurvedic formulations prepared strictly based on your unique body constitution (Dosha) and specific health problems.</p>
+                                    </div>
+                                </div>
+
+                                <div className="flex gap-4 group">
+                                    <div className="w-12 h-12 rounded-xl bg-green-100 flex items-center justify-center text-green-700 shrink-0 shadow-sm group-hover:scale-110 transition-transform">
+                                        <Home size={24} />
+                                    </div>
+                                    <div>
+                                        <h4 className="font-bold text-lg text-gray-900 mb-1">Kitchen Remedies</h4>
+                                        <p className="text-gray-600 leading-relaxed">Majority of the time, potent cures can be prepared with simple home ingredients. We empower you with this ancient knowledge.</p>
+                                    </div>
+                                </div>
+
+                                <div className="flex gap-4 group">
+                                    <div className="w-12 h-12 rounded-xl bg-green-100 flex items-center justify-center text-green-700 shrink-0 shadow-sm group-hover:scale-110 transition-transform">
+                                        <Users size={24} />
+                                    </div>
+                                    <div>
+                                        <h4 className="font-bold text-lg text-gray-900 mb-1">Guidance from Sadhgurus</h4>
+                                        <p className="text-gray-600 leading-relaxed">Receive invaluable inputs and holistic health strategies directly from our experienced team of Sadhgurus.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="flex flex-wrap gap-4 mt-8">
+                                <button className="px-8 py-3 rounded-full bg-gradient-to-r from-green-50/80 to-emerald-50/80 backdrop-blur-md text-green-700 font-bold border border-green-500 shadow-lg shadow-green-100/50 cursor-default flex items-center gap-3 hover:scale-105 transition-transform duration-300">
+                                    <div className="p-1.5 bg-white rounded-full text-green-600 shadow-sm">
+                                        <Clock size={16} />
+                                    </div>
+                                    <span className="tracking-wide uppercase text-xs">Coming Soon</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div className="md:w-1/2 relative h-[600px] overflow-hidden rounded-[2.5rem] shadow-2xl bg-gradient-to-br from-green-100 to-white p-2 rotate-2 hover:rotate-0 transition-transform duration-500">
+                            <motion.div
+                                animate={{ x: ["0%", "-50%"] }}
+                                transition={{
+                                    repeat: Infinity,
+                                    repeatType: "loop",
+                                    duration: 15,
+                                    ease: "linear",
+                                }}
+                                className="h-full flex flex-row gap-0"
+                                style={{ width: "200%" }}
+                            >
+                                <img
+                                    src="/images/meditation/Gemini_Generated_Image_3t34fb3t34fb3t34.png"
+                                    alt="Ayurvedic Herbs 1"
+                                    className="rounded-[2rem] w-1/2 object-cover h-[600px]"
+                                />
+                                <img
+                                    src="/images/meditation/Gemini_Generated_Image_k2lxzhk2lxzhk2lx.png"
+                                    alt="Ayurvedic Herbs 2"
+                                    className="rounded-[2rem] w-1/2 object-cover h-[600px]"
+                                />
+                                {/* Duplicate for seamless loop */}
+                                <img
+                                    src="/images/meditation/Gemini_Generated_Image_3t34fb3t34fb3t34.png"
+                                    alt="Ayurvedic Herbs 1"
+                                    className="rounded-[2rem] w-1/2 object-cover h-[600px]"
+                                />
+                                <img
+                                    src="/images/meditation/Gemini_Generated_Image_k2lxzhk2lxzhk2lx.png"
+                                    alt="Ayurvedic Herbs 2"
+                                    className="rounded-[2rem] w-1/2 object-cover h-[600px]"
+                                />
+                            </motion.div>
+
+                            <div className="absolute bottom-8 left-8 right-8 bg-white/90 backdrop-blur-md p-6 rounded-2xl shadow-lg z-10">
+                                <p className="text-gray-800 font-serif italic text-center">"Let food be thy medicine and medicine be thy food."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             {/* Offerings Grid */}
-            <section className="py-24 bg-rose-50/30">
+            <section className="py-24">
                 <div className="container-custom">
                     <div className="text-center max-w-2xl mx-auto mb-16">
                         <span className="text-gold-600 font-bold tracking-widest uppercase text-xs mb-3 block">Pathways to Awakening</span>
@@ -197,7 +316,7 @@ const MeditationServices = () => {
                             <motion.div
                                 key={idx}
                                 variants={fadeInUp}
-                                className={`p-8 rounded-[2.5rem] transition-all duration-300 relative overflow-hidden group ${cls.active ? 'bg-gray-900 text-white shadow-2xl scale-105 z-10' : 'bg-white text-gray-900 hover:bg-white border border-gray-100 hover:border-gold-200 hover:shadow-xl'}`}
+                                className={`p-8 rounded-[2.5rem] transition-all duration-300 relative overflow-hidden group ${cls.active ? 'bg-gray-900 text-white shadow-2xl scale-105 z-10' : 'bg-white/80 backdrop-blur-sm text-gray-900 hover:bg-white border border-gray-100 hover:border-gold-200 hover:shadow-xl'}`}
                             >
                                 <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 ${cls.active ? 'bg-white/10 text-gold-400' : 'bg-gold-50 text-gold-600'}`}>
                                     <cls.icon size={26} />

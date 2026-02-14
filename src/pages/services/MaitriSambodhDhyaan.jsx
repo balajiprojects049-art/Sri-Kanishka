@@ -27,7 +27,7 @@ const MaitriSambodhDhyaan = () => {
     };
 
     return (
-        <div className="min-h-screen bg-white overflow-hidden">
+        <div className="min-h-screen overflow-hidden">
             {/* Hero Section */}
             <section className="relative pt-40 pb-24 overflow-hidden">
                 <div className="absolute inset-0 z-0">
@@ -133,7 +133,7 @@ const MaitriSambodhDhyaan = () => {
             </section>
 
             {/* Why 21 Days? Section */}
-            <section className="py-24 bg-gray-50/50">
+            <section className="py-24">
                 <div className="container-custom text-center mb-16">
                     <span className="text-gray-400 font-bold tracking-[0.3em] uppercase text-xs mb-3 block">The Science of Change</span>
                     <div className="flex justify-center items-baseline gap-2">
@@ -161,7 +161,7 @@ const MaitriSambodhDhyaan = () => {
                                 icon: Sparkles
                             }
                         ].map((item, idx) => (
-                            <div key={idx} className="bg-white p-10 rounded-3xl shadow-xl border border-gray-100 hover:-translate-y-2 transition-all duration-300">
+                            <div key={idx} className="bg-white/90 backdrop-blur-sm p-10 rounded-3xl shadow-xl border border-gray-100 hover:-translate-y-2 transition-all duration-300">
                                 <div className="w-16 h-16 bg-[#E67E22]/10 rounded-2xl flex items-center justify-center mb-6">
                                     <item.icon className="text-[#E67E22]" size={32} />
                                 </div>

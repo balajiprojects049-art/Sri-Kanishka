@@ -27,7 +27,7 @@ const MaitriHavan = () => {
     };
 
     return (
-        <div className="min-h-screen bg-white overflow-hidden">
+        <div className="min-h-screen overflow-hidden">
             {/* Hero Section */}
             <section className="relative pt-40 pb-24 overflow-hidden">
                 <div className="absolute inset-0 z-0">
@@ -113,7 +113,7 @@ const MaitriHavan = () => {
             </section>
 
             {/* You Can Pray For Section */}
-            <section className="py-24 bg-gray-50/50">
+            <section className="py-24">
                 <div className="container-custom text-center mb-16">
                     <span className="text-gray-400 font-bold tracking-[0.3em] uppercase text-xs mb-3 block">Maitri Havans</span>
                     <div className="flex justify-center items-baseline gap-2">
@@ -186,7 +186,7 @@ const MaitriHavan = () => {
             </section>
 
             {/* Benefits Section */}
-            <section className="py-24 bg-gray-50/50">
+            <section className="py-24">
                 <div className="container-custom text-center mb-16">
                     <span className="text-gray-400 font-bold tracking-[0.3em] uppercase text-xs mb-3 block">Maitribodh Parivaar</span>
                     <div className="flex justify-center items-baseline gap-2">
@@ -250,7 +250,7 @@ const MaitriHavan = () => {
                             key={idx}
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            className="bg-white rounded-2xl overflow-hidden shadow-xl border border-gray-100 flex flex-col group"
+                            className="bg-white/90 backdrop-blur-sm rounded-2xl overflow-hidden shadow-xl border border-gray-100 flex flex-col group"
                         >
                             <div className="h-64 overflow-hidden">
                                 <img src={card.image} alt={card.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
@@ -277,7 +277,7 @@ const MaitriHavan = () => {
             </section>
 
             {/* When Can I Participate Section */}
-            <section className="py-24 bg-gray-50/50">
+            <section className="py-24">
                 <div className="container-custom text-center mb-16">
                     <span className="text-gray-400 font-bold tracking-[0.3em] uppercase text-xs mb-3 block">Maitri Havan</span>
                     <div className="flex justify-center items-baseline gap-2">
@@ -350,7 +350,7 @@ const MaitriHavan = () => {
                         {/* Dropdown Placeholder */}
                         <div className="mb-12">
                             <label className="block text-xs font-bold text-gray-500 uppercase tracking-widest mb-3">Choose your havan type *</label>
-                            <select className="w-full bg-white border border-gray-200 rounded-xl px-4 py-4 text-gray-700 focus:ring-2 focus:ring-[#E67E22]/20 outline-none appearance-none">
+                            <select className="w-full bg-white/90 backdrop-blur-sm border border-gray-200 rounded-xl px-4 py-4 text-gray-700 focus:ring-2 focus:ring-[#E67E22]/20 outline-none appearance-none">
                                 <option>--Select your havan type--</option>
                                 <option>Vyaktigat Havan (Ashram/Arohan Kendra)</option>
                                 <option>Vyaktigat Havan (Home/Office)</option>
@@ -363,7 +363,7 @@ const MaitriHavan = () => {
                             <h3 className="text-2xl font-bold font-display text-[#E67E22] opacity-50 uppercase tracking-widest">--Select Your Havan Type--</h3>
                         </div>
 
-                        <form className="grid grid-cols-1 md:grid-cols-2 gap-8 bg-white p-10 rounded-[2.5rem] border border-gray-100 shadow-xl" onSubmit={(e) => e.preventDefault()}>
+                        <form className="grid grid-cols-1 md:grid-cols-2 gap-8 bg-white/90 backdrop-blur-sm p-10 rounded-[2.5rem] border border-gray-100 shadow-xl" onSubmit={(e) => e.preventDefault()}>
                             {/* Row 1 */}
                             <div className="space-y-1.5">
                                 <label className="text-[10px] font-bold text-gray-400 uppercase tracking-wider">Full name (as mentioned on the PAN card) *</label>
