@@ -289,7 +289,7 @@ const Home = () => {
                                 </div>
                             </div>
                             <div className="p-8">
-                                <h3 className="text-2xl font-bold text-gray-900 mb-3 font-display group-hover:text-rose-600 transition-colors">Finding Love</h3>
+                                <h3 className="text-2xl font-bold text-gray-900 mb-3 font-display group-hover:text-rose-600 transition-colors">Global Matrimony</h3>
                                 <p className="text-gray-600 leading-relaxed mb-6">Find your soulmate with our trusted and personalized matching service, blending tradition with modernity.</p>
                                 <div className="flex items-center text-rose-600 font-bold group-hover:gap-2 transition-all">
                                     Find Matches <ArrowRight size={18} className="ml-2" />
