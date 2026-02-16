@@ -308,7 +308,7 @@ const Home = () => {
                                 </div>
                             </div>
                             <div className="p-8">
-                                <h3 className="text-2xl font-bold text-gray-900 mb-3 font-display group-hover:text-purple-600 transition-colors">Inner Peace & spiritual</h3>
+                                <h3 className="text-xl font-bold text-gray-900 mb-3 font-display group-hover:text-purple-600 transition-colors whitespace-nowrap">Inner Peace, Spiritual & Healings</h3>
                                 <p className="text-gray-600 leading-relaxed mb-6">Reconnect with yourself through guided meditation, spiritual retreats, and mindfulness practices.</p>
                                 <div className="flex items-center text-purple-600 font-bold group-hover:gap-2 transition-all">
                                     Start Journey <ArrowRight size={18} className="ml-2" />
