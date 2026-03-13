@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowRight, Code, Heart, Flower, Star, Quote, ChevronLeft, ChevronRight, Sparkles, Users, Briefcase, Sun, CheckCircle } from 'lucide-react';
+import { ArrowRight, Code, Heart, Flower, Star, Quote, ChevronLeft, ChevronRight, Sparkles, Users, Briefcase, Sun, CheckCircle, Building, Globe, ShoppingCart } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { stats, testimonials } from '../data/mockData';
 import { useUI } from '../context/UIContext';
@@ -297,7 +297,7 @@ const Home = () => {
                             </div>
                         </Link>
 
-                        <Link to="/services/meditation" className="group relative bg-white/90 backdrop-blur-sm rounded-[2.5rem] overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                        <Link to="/services/meditation" className="group relative bg-white/90 backdrop-blur-sm rounded-[2.5rem] overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-white/50">
                             <div className="h-64 overflow-hidden relative">
                                 <div className="absolute inset-0 bg-purple-600/20 group-hover:bg-purple-600/10 transition-colors z-10"></div>
                                 <img src="/images/meditation/hero-meditation.png" onError={(e) => e.currentTarget.src = 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&q=80&w=800'} alt="Meditation Services" className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" />
@@ -312,6 +312,63 @@ const Home = () => {
                                 <p className="text-gray-600 leading-relaxed mb-6">Reconnect with yourself through guided meditation, spiritual retreats, and mindfulness practices.</p>
                                 <div className="flex items-center text-purple-600 font-bold group-hover:gap-2 transition-all">
                                     Start Journey <ArrowRight size={18} className="ml-2" />
+                                </div>
+                            </div>
+                        </Link>
+
+                        <Link to="/services/real-estate" className="group relative bg-white/90 backdrop-blur-sm rounded-[2.5rem] overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-white/50">
+                            <div className="h-64 overflow-hidden relative">
+                                <div className="absolute inset-0 bg-emerald-600/20 group-hover:bg-emerald-600/10 transition-colors z-10"></div>
+                                <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Real Estate" className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" />
+                                <div className="absolute top-4 left-4 z-20">
+                                    <span className="bg-white/90 backdrop-blur-sm text-emerald-800 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider shadow-sm flex items-center gap-2">
+                                        <Building size={14} /> Estates
+                                    </span>
+                                </div>
+                            </div>
+                            <div className="p-8">
+                                <h3 className="text-2xl font-bold text-gray-900 mb-3 font-display group-hover:text-emerald-600 transition-colors">Real Estate & Construction</h3>
+                                <p className="text-gray-600 leading-relaxed mb-6">Explore premium residential properties and professional construction services tailored for your future.</p>
+                                <div className="flex items-center text-emerald-600 font-bold group-hover:gap-2 transition-all">
+                                    View Properties <ArrowRight size={18} className="ml-2" />
+                                </div>
+                            </div>
+                        </Link>
+
+                        <Link to="/services/abroad-consultancy" className="group relative bg-white/90 backdrop-blur-sm rounded-[2.5rem] overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-white/50">
+                            <div className="h-64 overflow-hidden relative">
+                                <div className="absolute inset-0 bg-sky-600/20 group-hover:bg-sky-600/10 transition-colors z-10"></div>
+                                <img src="https://images.unsplash.com/photo-1523050853064-dbad323bce9a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Abroad Consultancy" className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" />
+                                <div className="absolute top-4 left-4 z-20">
+                                    <span className="bg-white/90 backdrop-blur-sm text-sky-800 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider shadow-sm flex items-center gap-2">
+                                        <Globe size={14} /> Global
+                                    </span>
+                                </div>
+                            </div>
+                            <div className="p-8">
+                                <h3 className="text-2xl font-bold text-gray-900 mb-3 font-display group-hover:text-sky-600 transition-colors">Abroad Consultancy</h3>
+                                <p className="text-gray-600 leading-relaxed mb-6">Expert guidance for overseas education, work permits, and immigration to top global destinations.</p>
+                                <div className="flex items-center text-sky-600 font-bold group-hover:gap-2 transition-all">
+                                    Consult Expert <ArrowRight size={18} className="ml-2" />
+                                </div>
+                            </div>
+                        </Link>
+
+                        <Link to="/services/groceries" className="group relative bg-white/90 backdrop-blur-sm rounded-[2.5rem] overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-white/50">
+                            <div className="h-64 overflow-hidden relative">
+                                <div className="absolute inset-0 bg-orange-600/20 group-hover:bg-orange-600/10 transition-colors z-10"></div>
+                                <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Groceries" className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" />
+                                <div className="absolute top-4 left-4 z-20">
+                                    <span className="bg-white/90 backdrop-blur-sm text-orange-800 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider shadow-sm flex items-center gap-2">
+                                        <ShoppingCart size={14} /> Groceries
+                                    </span>
+                                </div>
+                            </div>
+                            <div className="p-8">
+                                <h3 className="text-2xl font-bold text-gray-900 mb-3 font-display group-hover:text-orange-600 transition-colors">Premium Groceries</h3>
+                                <p className="text-gray-600 leading-relaxed mb-6">Farm-fresh organic staples and premium quality groceries delivered directly to your kitchen.</p>
+                                <div className="flex items-center text-orange-600 font-bold group-hover:gap-2 transition-all">
+                                    Shop Now <ArrowRight size={18} className="ml-2" />
                                 </div>
                             </div>
                         </Link>

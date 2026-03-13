@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Code, Heart, Flower, ArrowRight, Sparkles } from 'lucide-react';
+import { Code, Heart, Flower, ArrowRight, Sparkles, Building, Globe, ShoppingCart } from 'lucide-react';
 
 const Services = () => {
     const [isLoading, setIsLoading] = useState(true);
@@ -35,6 +35,30 @@ const Services = () => {
             icon: Flower,
             color: "indigo",
             link: "/services/meditation"
+        },
+        {
+            id: 'real-estate',
+            title: "Real Estate & Construction",
+            desc: "Premium properties and expert construction services.",
+            icon: Building,
+            color: "emerald",
+            link: "/services/real-estate"
+        },
+        {
+            id: 'abroad',
+            title: "Abroad Consultancy",
+            desc: "Expert guidance for education and careers overseas.",
+            icon: Globe,
+            color: "sky",
+            link: "/services/abroad-consultancy"
+        },
+        {
+            id: 'groceries',
+            title: "Premium Groceries",
+            desc: "Organic staples and farm-fresh essentials delivered home.",
+            icon: ShoppingCart,
+            color: "orange",
+            link: "/services/groceries"
         }
     ];
 
@@ -63,14 +87,14 @@ const Services = () => {
                         Holistic Services for <br /> <span className="text-gradient-gold">Every Aspect of Life</span>
                     </motion.h1>
                     <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-                        Discover the three pillars of Sri Kanishka designed to empower your career, relationships, and well-being.
+                        Discover the core pillars of Sri Kanishka designed to empower every aspect of your life—from career and home to well-being and staples.
                     </p>
                 </div>
 
                 {/* Service Cards Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {isLoading ? (
-                        [1, 2, 3].map((i) => (
+                        [1, 2, 3, 4, 5, 6].map((i) => (
                             <div key={i} className="bg-white/80 backdrop-blur-sm rounded-[2rem] p-8 border border-gray-100 h-[350px] animate-pulse relative overflow-hidden">
                                 <div className="absolute inset-0 bg-gradient-to-br from-transparent to-gray-50/50"></div>
                                 <div className="w-16 h-16 bg-gray-100 rounded-2xl mb-8"></div>

@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import {
     Heart, Sparkles, ShieldCheck, Coins, TrendingUp, Users, Home, Globe, Leaf,
     Brain, MessageCircle, Zap, Activity, XCircle, Filter, RefreshCw, Star,
-    ArrowRight, Flame, HandHelping, Sun
+    ArrowRight, Flame, HandHelping, Sun, Phone
 } from 'lucide-react';
 import { useUI } from '../../context/UIContext';
 import { Link } from 'react-router-dom';
@@ -446,6 +446,27 @@ const MaitriHavan = () => {
                                 </button>
                             </div>
                         </form>
+
+                        {/* Contact Strip */}
+                        <motion.div 
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            className="mt-16 p-8 rounded-[2rem] bg-orange-50/80 border border-orange-200 flex flex-col md:flex-row items-center justify-between gap-6"
+                        >
+                            <div className="flex items-center gap-4">
+                                <div className="w-12 h-12 bg-[#E67E22] rounded-full flex items-center justify-center text-white">
+                                    <Phone size={24} />
+                                </div>
+                                <div className="text-left">
+                                    <h3 className="text-xl font-bold text-gray-900 font-display">Questions about Havan?</h3>
+                                    <p className="text-gray-600">Call us for any queries related to spiritual rituals.</p>
+                                </div>
+                            </div>
+                            <a href="tel:+918121121369" className="px-10 py-4 bg-[#E67E22] text-white font-bold rounded-xl hover:bg-[#D35400] transition-all shadow-lg text-lg">
+                                +91 8121121369
+                            </a>
+                        </motion.div>
                     </div>
                 </div>
             </section>

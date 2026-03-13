@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Code, Terminal, Database, CheckCircle, ArrowRight, Briefcase, Sparkles, Star } from 'lucide-react';
+import { Code, Terminal, Database, CheckCircle, ArrowRight, Briefcase, Sparkles, Star, Phone } from 'lucide-react';
 import { courses, jobOffers } from '../../data/mockData';
 import { useUI } from '../../context/UIContext';
 
@@ -311,7 +311,7 @@ const ITServices = () => {
                         </div>
                     </div>
 
-                    <div className="text-center">
+                    <div className="text-center mt-20">
                         <p className="text-gold-100/40 text-sm uppercase tracking-widest mb-8 font-bold">Our Alumni Work At</p>
                         <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
                             {['Google', 'Microsoft', 'Amazon', 'TCS', 'Infosys', 'Wipro'].map((company, i) => (
@@ -319,6 +319,32 @@ const ITServices = () => {
                             ))}
                         </div>
                     </div>
+                </div>
+
+                {/* IT Contact Strip */}
+                <div className="container-custom mt-24">
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true }}
+                        className="p-10 rounded-[2.5rem] bg-gradient-to-r from-blue-600 to-indigo-700 text-white flex flex-col md:flex-row items-center justify-between gap-8 shadow-2xl shadow-blue-500/20"
+                    >
+                        <div className="flex items-center gap-6">
+                            <div className="w-16 h-16 bg-white/10 backdrop-blur-md rounded-2xl flex items-center justify-center border border-white/20">
+                                <Phone size={32} />
+                            </div>
+                            <div className="text-left">
+                                <h3 className="text-2xl font-bold font-display">Ready to start your tech journey?</h3>
+                                <p className="text-blue-100/70">Contact our admissions team for course details and seat availability.</p>
+                            </div>
+                        </div>
+                        <div className="flex flex-col items-center md:items-end gap-2">
+                            <span className="text-xs font-bold uppercase tracking-[0.2em] text-blue-200">Admissions Line</span>
+                            <a href="tel:7794070948" className="text-3xl font-bold font-display hover:text-gold-400 transition-colors">
+                                7794070948
+                            </a>
+                        </div>
+                    </motion.div>
                 </div>
             </section>
         </div >

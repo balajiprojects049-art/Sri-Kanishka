@@ -25,7 +25,10 @@ const Header = () => {
     const services = [
         { title: "IT Training & Consultancy", path: "/services/it", desc: "Master robust tech skills" },
         { title: "Global Matrimony", path: "/services/marriage", desc: "Find your perfect partner" },
-        { title: "Meditation,Spirituality & Healings", path: "/services/meditation", desc: "Discover inner peace" }
+        { title: "Meditation & Spirituality", path: "/services/meditation", desc: "Discover inner peace" },
+        { title: "Real Estate & Construction", path: "/services/real-estate", desc: "Build your dream future" },
+        { title: "Abroad Consultancy", path: "/services/abroad-consultancy", desc: "Expert global guidance & Exam prep" },
+        { title: "Premium Groceries", path: "/services/groceries", desc: "Fresh organic staples" }
     ];
 
     return (

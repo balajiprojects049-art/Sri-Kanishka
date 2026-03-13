@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Flower, Sun, Moon, Wind, Calendar, Sparkles, Heart, Star, Clock, Leaf, Home, Users } from 'lucide-react';
+import { Flower, Sun, Moon, Wind, Calendar, Sparkles, Heart, Star, Clock, Leaf, Home, Users, Phone } from 'lucide-react';
 import { useUI } from '../../context/UIContext';
 import { Link } from 'react-router-dom';
 
@@ -430,6 +430,27 @@ const MeditationServices = () => {
                             </div>
                         ))}
                     </div>
+
+                    {/* Contact Body Section */}
+                    <motion.div 
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="mt-16 p-8 rounded-[2rem] bg-gold-500/10 border border-gold-500/20 flex flex-col md:flex-row items-center justify-between gap-6"
+                    >
+                        <div className="flex items-center gap-4">
+                            <div className="w-12 h-12 bg-gold-500 rounded-full flex items-center justify-center text-white">
+                                <Phone size={24} />
+                            </div>
+                            <div>
+                                <h3 className="text-xl font-bold text-white font-display">Need Spiritual Guidance?</h3>
+                                <p className="text-gold-100/60">Our mentors are available to help you on your journey.</p>
+                            </div>
+                        </div>
+                        <a href="tel:+918121121369" className="px-8 py-3 bg-white text-gray-900 font-bold rounded-xl hover:bg-gold-500 hover:text-white transition-all shadow-lg text-lg">
+                            Call +91 8121121369
+                        </a>
+                    </motion.div>
                 </div>
             </section>
 

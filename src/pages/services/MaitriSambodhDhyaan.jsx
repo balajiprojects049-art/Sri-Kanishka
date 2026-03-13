@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import {
     Brain, Sparkles, Heart, Zap, ShieldCheck, Sun, CheckCircle,
     MessageCircle, ArrowRight, Play, Globe, Calendar, Clock, MapPin,
-    RefreshCw, Coins
+    RefreshCw, Coins, Phone
 } from 'lucide-react';
 import { useUI } from '../../context/UIContext';
 import { Link } from 'react-router-dom';
@@ -239,6 +239,27 @@ const MaitriSambodhDhyaan = () => {
                             </button>
                         </div>
                     </div>
+
+                    {/* Contact Strip */}
+                    <motion.div 
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="max-w-5xl mx-auto mt-16 p-8 rounded-[2rem] bg-gray-50 border border-gray-100 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl"
+                    >
+                        <div className="flex items-center gap-4">
+                            <div className="w-12 h-12 bg-[#E67E22] rounded-full flex items-center justify-center text-white">
+                                <Phone size={24} />
+                            </div>
+                            <div className="text-left">
+                                <h3 className="text-xl font-bold text-gray-900 font-display">Need Help with Registration?</h3>
+                                <p className="text-gray-600">Our spiritual guides can assist you with your queries.</p>
+                            </div>
+                        </div>
+                        <a href="tel:+918121121369" className="px-10 py-4 bg-gray-900 text-white font-bold rounded-xl hover:bg-gold-600 transition-all shadow-lg text-lg">
+                            +91 8121121369
+                        </a>
+                    </motion.div>
                 </div>
             </section>
 
