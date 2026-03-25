@@ -43,7 +43,7 @@ const Footer = () => {
                     {/* Brand */}
                     <motion.div variants={itemVariants} className="space-y-6">
                         <Link to="/" className="inline-block transform hover:scale-105 transition-transform duration-300">
-                            <img src="/logo.png" alt="Sri Kanishka Associates" className="h-16 w-auto object-contain brightness-0 invert drop-shadow-lg" />
+                            <img src="/logo.png" alt="Kanishka Sri Associates" className="h-16 w-auto object-contain brightness-0 invert drop-shadow-lg" />
                         </Link>
                         <p className="text-gold-100/70 leading-relaxed text-sm font-light tracking-wide">
                             Empowering lives through career growth, relationship harmony, and inner peace. Your holistic partner for success and well-being.
@@ -122,7 +122,7 @@ const Footer = () => {
                     transition={{ delay: 0.5, duration: 1 }}
                     className="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gold-100/30 font-light"
                 >
-                    <p>&copy; {new Date().getFullYear()} Sri Kanishka Associates. All rights reserved.</p>
+                    <p>&copy; {new Date().getFullYear()} Kanishka Sri Associates. All rights reserved.</p>
                     <div className="flex space-x-8 mt-6 md:mt-0">
                         <a href="#" className="hover:text-gold-400 transition-colors relative group">
                             Privacy Policy

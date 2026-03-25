@@ -11,7 +11,7 @@ const About = () => {
     ];
 
     const team = [
-        { name: "Sri Kanishka", role: "Founder & CEO", image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=400" },
+        { name: "Kanishka Sri", role: "Founder & CEO", image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=400" },
         { name: "Aarav Patel", role: "Head of Technology", image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=400" },
         { name: "Priya Singh", role: "Lead Relationship Manager", image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400" },
         { name: "Dr. Ananya Roy", role: "Spiritual Guide", image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&q=80&w=400" }

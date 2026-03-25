@@ -29,7 +29,7 @@ const Home = () => {
                     <div className="absolute inset-0 bg-gradient-to-r from-gray-900/80 to-gray-900/40 z-10"></div>
                     <img
                         src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=2000"
-                        alt="Sri Kanishka Associates - Holistic Growth"
+                        alt="Kanishka Sri Associates - Holistic Growth"
                         className="w-full h-full object-cover object-center"
                     />
                 </div>
@@ -527,7 +527,7 @@ const Home = () => {
 
                         <div className="relative z-10 max-w-3xl mx-auto text-white">
                             <h3 className="text-3xl md:text-6xl font-bold font-display mb-8 text-white leading-tight">Ready to transform your life?</h3>
-                            <p className="text-gray-300 text-xl mb-12 leading-relaxed">Join thousands of others who have found success, love, and peace with Sri Kanishka Associates.</p>
+                            <p className="text-gray-300 text-xl mb-12 leading-relaxed">Join thousands of others who have found success, love, and peace with Kanishka Sri Associates.</p>
                             <div className="flex flex-col sm:flex-row justify-center gap-6">
                                 <Link to="/contact" className="px-10 py-4 bg-white text-gray-900 font-bold rounded-full hover:shadow-lg hover:shadow-white/20 transform hover:-translate-y-1 transition-all text-lg">
                                     Get in Touch

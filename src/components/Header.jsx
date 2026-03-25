@@ -39,8 +39,8 @@ const Header = () => {
             >
                 <div className="container-custom flex items-center justify-between">
                     <Link to="/" className="flex items-center gap-3 text-2xl font-semibold transform hover:scale-105 transition-transform duration-300" aria-label="Go to homepage">
-                        <img src="/logo.png" alt="Sri Kanishka Associates" className="h-16 w-auto object-contain" />
-                        <span className="sr-only">Sri Kanishka Associates</span>
+                        <img src="/logo.png" alt="Kanishka Sri Associates" className="h-16 w-auto object-contain" />
+                        <span className="sr-only">Kanishka Sri Associates</span>
                     </Link>
 
                     {/* Desktop nav */}

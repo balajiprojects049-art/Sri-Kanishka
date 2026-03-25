@@ -87,7 +87,7 @@ const Services = () => {
                         Holistic Services for <br /> <span className="text-gradient-gold">Every Aspect of Life</span>
                     </motion.h1>
                     <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-                        Discover the core pillars of Sri Kanishka designed to empower every aspect of your life—from career and home to well-being and staples.
+                        Discover the core pillars of Kanishka Sri designed to empower every aspect of your life—from career and home to well-being and staples.
                     </p>
                 </div>
 

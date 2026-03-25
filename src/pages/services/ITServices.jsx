@@ -269,7 +269,7 @@ const ITServices = () => {
                         {[
                             { name: "Priya Sharma", role: "Frontend Developer at Infosys", image: "https://randomuser.me/api/portraits/women/44.jpg", quote: "The live projects were a game changer. I could talk confidently about my code during the interview." },
                             { name: "Rahul Verma", role: "Software Engineer at TCS", image: "https://randomuser.me/api/portraits/men/32.jpg", quote: "Mentors are very supportive. They helped me debug my code even late at night. improved my problem solving skills." },
-                            { name: "Anjali Gupta", role: "React Developer at Wipro", image: "https://randomuser.me/api/portraits/women/65.jpg", quote: "Sri Kanishka's placement team is amazing. They prepared me for HR rounds and technical tests thoroughly." }
+                            { name: "Anjali Gupta", role: "React Developer at Wipro", image: "https://randomuser.me/api/portraits/women/65.jpg", quote: "Kanishka Sri's placement team is amazing. They prepared me for HR rounds and technical tests thoroughly." }
                         ].map((testimonial, idx) => (
                             <div key={idx} className="p-8 rounded-[2rem] bg-indigo-50/50 hover:bg-white hover:shadow-xl border border-transparent hover:border-indigo-100 transition-all duration-300">
                                 <div className="flex items-center gap-4 mb-6">
@@ -339,9 +339,9 @@ const ITServices = () => {
                             </div>
                         </div>
                         <div className="flex flex-col items-center md:items-end gap-2">
-                            <span className="text-xs font-bold uppercase tracking-[0.2em] text-blue-200">Admissions Line</span>
-                            <a href="tel:7794070948" className="text-3xl font-bold font-display hover:text-gold-400 transition-colors">
-                                7794070948
+                            <span className="text-xs font-bold uppercase tracking-[0.2em] text-blue-200">Name: Chanakya</span>
+                            <a href="tel:9441809692" className="text-3xl font-bold font-display hover:text-gold-400 transition-colors">
+                                9441809692
                             </a>
                         </div>
                     </motion.div>

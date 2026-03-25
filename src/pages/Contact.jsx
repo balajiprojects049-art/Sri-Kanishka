@@ -74,9 +74,9 @@ const Contact = () => {
                         {/* Info Cards */}
                         <div className="grid gap-6">
                             {[
-                                { icon: MapPin, title: "Our Office", text: "Sri Kanishka Associates, #123, Tech Park", sub: "Bangalore, Karnataka 560001", color: "blue" },
-                                { icon: Phone, title: "Phone Support", text: "+91 98765 43210", sub: "Mon-Fri from 9am to 6pm", color: "gold" },
-                                { icon: Mail, title: "Email Us", text: "hello@srikanishka.com", sub: "We reply within 24 hours", color: "purple" }
+                                { icon: MapPin, title: "Our Office", text: "Kanishka Sri Associates, #123, Tech Park", sub: "Bangalore, Karnataka 560001", color: "blue" },
+                                { icon: Phone, title: "Phone Support", text: "+91 9441809692", sub: "Name: Chanakya", color: "gold" },
+                                { icon: Mail, title: "Email Us", text: "hello@kanishkasri.com", sub: "We reply within 24 hours", color: "purple" }
                             ].map((item, idx) => (
                                 <motion.div
                                     key={idx}

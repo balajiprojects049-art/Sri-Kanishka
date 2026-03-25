@@ -115,7 +115,7 @@ const MarriageServices = () => {
                         <span className="text-rose-500 font-bold tracking-widest uppercase text-xs mb-3 block">Our Commitment</span>
                         <h2 className="text-3xl font-bold text-black mb-6 font-display">A Union of Souls & Families</h2>
                         <p className="text-lg text-black leading-relaxed mb-6">
-                            Marriage is more than just a ceremony; it is a lifetime commitment of two families. At Sri Kanishka, we understand the delicate balance between modern aspirations and traditional family values.
+                            Marriage is more than just a ceremony; it is a lifetime commitment of two families. At Kanishka Sri, we understand the delicate balance between modern aspirations and traditional family values.
                         </p>
                         <p className="text-lg text-black leading-relaxed">
                             Our dedicated relationship managers spend time understanding not just your biodata, but your personality, life goals, and family dynamics to suggest matches that truly resonate on a deeper level. We believe in creating alliances that stand the test of time.
