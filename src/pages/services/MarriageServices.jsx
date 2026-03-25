@@ -255,6 +255,53 @@ const MarriageServices = () => {
                 </div>
             </section>
 
+            {/* Agent Section */}
+            <section className="py-20">
+                <div className="container-custom">
+                    <div className="text-center mb-12">
+                        <span className="text-rose-500 font-bold tracking-widest uppercase text-xs mb-3 block">Our Trusted Agent</span>
+                        <h2 className="text-3xl font-bold text-gray-900 font-display">Sri Mahathi Marriage Bureau</h2>
+                    </div>
+                    <div className="max-w-5xl mx-auto flex flex-col lg:flex-row gap-10 items-center justify-center">
+                        {/* Agent Photo Card */}
+                        <div className="flex flex-col items-center bg-white rounded-[2rem] shadow-xl border border-rose-100 p-8 hover:shadow-2xl hover:shadow-rose-100/50 transition-all duration-300 group w-full lg:w-auto">
+                            <div className="relative mb-6">
+                                <div className="absolute -inset-2 bg-gradient-to-br from-rose-200 to-pink-200 rounded-full blur-md opacity-60 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                <img
+                                    src="/images/marriage/agent-venkat-reddy.jpg"
+                                    alt="Kongari Venkat Reddy"
+                                    className="relative w-44 h-44 rounded-full object-cover object-top border-4 border-white shadow-lg"
+                                />
+                            </div>
+                            <h3 className="text-xl font-bold text-gray-900 font-display mb-1">Kongari Venkat Reddy</h3>
+                            <p className="text-rose-600 font-semibold text-sm mb-3 uppercase tracking-wider">Marriage Bureau Agent</p>
+                            <a
+                                href="tel:9912131155"
+                                className="flex items-center gap-2 bg-gradient-to-r from-rose-500 to-pink-600 text-white px-6 py-2.5 rounded-full font-bold text-sm hover:shadow-lg hover:shadow-rose-300/50 transition-all duration-300 hover:scale-105"
+                            >
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.77a16 16 0 0 0 6 6l.9-.9a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                                9912131155
+                            </a>
+                        </div>
+
+                        {/* Visiting Card */}
+                        <div className="w-full lg:flex-1 group">
+                            <div className="relative">
+                                <div className="absolute -inset-3 bg-gradient-to-r from-rose-200 via-orange-100 to-pink-200 rounded-[2rem] blur-xl opacity-60 group-hover:opacity-100 transition-opacity duration-500"></div>
+                                <img
+                                    src="/images/marriage/agent-visiting-card.jpg"
+                                    alt="Sri Mahathi Marriage Bureau Visiting Card"
+                                    className="relative w-full rounded-[1.5rem] shadow-2xl border-4 border-white object-cover group-hover:scale-[1.02] transition-transform duration-500"
+                                />
+                            </div>
+                            <p className="text-center text-gray-500 text-sm mt-4 font-medium">
+                                MSME Govt. Certified · Reg. No. 744/2025 · Offices: Jagtial &amp; Karimnagar
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             {/* Placement Stats & Partners - Footer Style */}
             <section className="py-20 bg-[#1F1209] text-white rounded-t-[3rem] mt-auto">
                 <div className="container-custom">
