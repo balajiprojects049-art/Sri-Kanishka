@@ -58,6 +58,56 @@ export const courses = [
         rating: 4.9,
         reviews: 340,
         image: "/images/it/ui-ux.png"
+    },
+    {
+        id: 7,
+        title: "MSBI (Microsoft Business Intelligence)",
+        tech: ["SSIS", "SSRS", "SSAS", "SQL Server"],
+        duration: "3 Months",
+        level: "Intermediate",
+        rating: 4.7,
+        reviews: 98,
+        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop"
+    },
+    {
+        id: 8,
+        title: "Power BI",
+        tech: ["Power BI Desktop", "DAX", "Power Query", "Data Modeling"],
+        duration: "2 Months",
+        level: "Beginner to Advanced",
+        rating: 4.9,
+        reviews: 215,
+        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop"
+    },
+    {
+        id: 9,
+        title: "Azure & AWS Cloud",
+        tech: ["Microsoft Azure", "AWS", "Cloud Architecture", "DevOps"],
+        duration: "4 Months",
+        level: "Intermediate",
+        rating: 4.8,
+        reviews: 173,
+        image: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?q=80&w=2070&auto=format&fit=crop"
+    },
+    {
+        id: 10,
+        title: "Databricks",
+        tech: ["Apache Spark", "Delta Lake", "PySpark", "MLflow"],
+        duration: "3 Months",
+        level: "Advanced",
+        rating: 4.8,
+        reviews: 87,
+        image: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?q=80&w=2074&auto=format&fit=crop"
+    },
+    {
+        id: 11,
+        title: "Zoho Analytics",
+        tech: ["Zoho Analytics", "Dashboards", "Reports", "Data Blending"],
+        duration: "1.5 Months",
+        level: "Beginner",
+        rating: 4.6,
+        reviews: 64,
+        image: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=2076&auto=format&fit=crop"
     }
 ];
 
