@@ -447,8 +447,8 @@ const MeditationServices = () => {
                                 <p className="text-gold-100/60">Our mentors are available to help you on your journey.</p>
                             </div>
                         </div>
-                        <a href="tel:+919441809692" className="px-8 py-3 bg-white text-gray-900 font-bold rounded-xl hover:bg-gold-500 hover:text-white transition-all shadow-lg text-lg">
-                            Call Chanakya: +91 9441809692
+                        <a href="tel:+918121121369" className="px-8 py-3 bg-white text-gray-900 font-bold rounded-xl hover:bg-gold-500 hover:text-white transition-all shadow-lg text-lg">
+                            Call +91 81211 21369
                         </a>
                     </motion.div>
                 </div>

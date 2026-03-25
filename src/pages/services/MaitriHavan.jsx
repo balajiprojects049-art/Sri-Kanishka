@@ -463,8 +463,8 @@ const MaitriHavan = () => {
                                     <p className="text-gray-600">Call us for any queries related to spiritual rituals.</p>
                                 </div>
                             </div>
-                            <a href="tel:+919441809692" className="px-10 py-4 bg-[#E67E22] text-white font-bold rounded-xl hover:bg-[#D35400] transition-all shadow-lg text-lg">
-                                Chanakya: +91 9441809692
+                            <a href="tel:+918121121369" className="px-10 py-4 bg-[#E67E22] text-white font-bold rounded-xl hover:bg-[#D35400] transition-all shadow-lg text-lg">
+                                +91 81211 21369
                             </a>
                         </motion.div>
                     </div>

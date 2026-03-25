@@ -256,8 +256,8 @@ const MaitriSambodhDhyaan = () => {
                                 <p className="text-gray-600">Our spiritual guides can assist you with your queries.</p>
                             </div>
                         </div>
-                        <a href="tel:+919441809692" className="px-10 py-4 bg-gray-900 text-white font-bold rounded-xl hover:bg-gold-600 transition-all shadow-lg text-lg">
-                            Chanakya: +91 9441809692
+                        <a href="tel:+918121121369" className="px-10 py-4 bg-gray-900 text-white font-bold rounded-xl hover:bg-gold-600 transition-all shadow-lg text-lg">
+                            +91 81211 21369
                         </a>
                     </motion.div>
                 </div>
